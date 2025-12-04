@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>전체 흰 배경</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff; /* 전체 흰 배경 */
+      color: #222;
+      font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR";
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<!-- ▼▼▼ 기본 설정란 ▼▼▼ -->
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+
+<!-- ▼▼▼ 나무위키 분류란 ▼▼▼ -->
+
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+
+<!-- ▼▼▼ 나무위키 상단란 ▼▼▼ -->
+
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">이방인</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 外邦人  ·  “Stray”<a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a>   ·  異邦人<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+<!-- ▼▼▼ 나무위키 메인 이미지 ▼▼▼ -->
+
+        <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="https://i.postimg.cc/9MVLcs6J/muje122-20240818084542.png" width="100%" style="display:block;">
+            </div>
+          </td>
+        </tr>
+        
+
+<!-- ▼▼▼ 나무위키 메인 프로필 ▼▼▼ -->
+
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>세나 왓슨</b><br> Sēnā Watson</br> 塞那 · 华生</br> セナ  · ウァッスン</br></td></tr>
+<tr><td class="wt-color"><b>식별 번호</b></td><td class="wt-detail">?-?-4</td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">8월 23일</td></tr>
+<tr><td class="wt-color"><b>액티브 능력</b></td><td class="wt-detail">자기 합리화<a class="text2" id="ref2" href="#각주2"><sup>[2]</sup></a></td></tr>
+<tr><td class="wt-color"><b>패시브 능력</b></td><td class="wt-detail">이별의 발자취</td></tr>
+<tr><td class="wt-color"><b>버프</b></td><td class="wt-detail">아이러니</td></tr>
+<tr><td class="wt-color"><b>디버프</b></td><td class="wt-detail">현실도피<br>무소유</td></tr>
+<tr><td class="wt-color"><b>유형</b></td><td class="wt-detail"><img src="https://i.postimg.cc/QC1r9262/muje988-20251027220337.png" style="height:1.7em; vertical-align:middle;"></td></tr>
+<tr><td class="wt-color"><b>난이도</b></td><td class="wt-detail"><img src="https://i.postimg.cc/XYZpHJz4/muje984-20251027220027.png" style="height:1.5em; vertical-align:middle;"></td></tr>
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><img src="https://i.postimg.cc/MTjG5rPC/muje989-20251027221132.png" style="height:1.6em; vertical-align:middle;"><b>두루마리</b><a class="text3" id="ref3" href="#각주3"><sup>[3]</sup></a></td></tr></td></tr>
+<tr><td class="wt-color"><b>업적</b></td><td class="wt-detail">문턱의 생존<a class="text4" id="ref4" href="#각주4"><sup>[4]</sup></a></td></tr>
+      </tbody>
+    </table>
+
+
+<!-- ▼▼▼ 나무위키 목차란 ▼▼▼ -->
+    
+
+<!-- ▼▼▼ 나무위키 목차란 ▼▼▼ -->
+    
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 외적 특성<br />
+<a style="padding-left: 0px;" href="#목차3-">3.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-1">3.1.</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차3-2">3.2.</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-3">3.3.</a> 배경 추리<br />
+<a style="padding-left: 20px;" href="#목차3-4">3.4.</a> 인물 관계<br />
+<a style="padding-left: 0px;" href="#목차4">4.</a> 이어보기<br />
+        </td></tr></tbody></table>
+
+<!-- ▼▼▼ 나무위키 목차 순서별 내용 ▼▼▼ -->
+
+<!-- ▼▼▼ (1) 개요 : 유튭 영상과 제목 ▼▼▼ -->
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차">1.</a> 개요</h2></summary>
+<table class="wiki-img-sing"><tbody><tr><td style="border-color: #2d3444;"><iframe src="https://www.youtube.com/embed/6It0dh90LHs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen="true"></iframe></td></tr><tr><td style="background-color: #2d3444; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: rgb(255, 255, 255);"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;"><b>이방인 EP 'Sēna's Limitless Grief'</b></span></span></span><br></td></tr>
+
+
+     <tr><td style="background-color: #ffffff; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5 !important;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: #2d3444;"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;">
+              <details style="margin-top: 0px; margin-bottom: 0px !important;">
+        <summary style="cursor: pointer; font-weight: bold; padding: 0px; background-color: #ffffff; color: #2d3444; text-align: center;">
+<b>가사 보기 ▼ </b>
+        </summary>
+        <div style="padding: 10px; background-color: #ffffff; color: #2d3444; line-height: 1.5;">
+         준비중
+        </details>
+</span></span></span></td></tr>
+</tbody>
+</table>
+
+<!-- ▼▼▼ (1) 인용란 ▼▼▼ -->
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">진실한 마음을 마주할 수 있는 상대는 세상에 몇 없는 법입니다. 그녀가 이곳에서 또 다시 마주하게 될 전말은 무엇일까요?</span><br></td></tr></tbody></table>
+
+<!-- ▼▼▼ (1) 본론 ▼▼▼ -->
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);">제5인격의 생존자. 제한 조건이 걸린 소모형 두루마리를 사용해 자신의 현 공포치와 동일하게 타인의 상태를 변화시키는 능력을 가진 보조형 캐릭터이다. </span><br></p>
+</details>
+
+<!-- ▼▼▼ (2) 외적 특성 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차">2.</a> 외적 특성</h2></summary>
+
+<!-- ▼▼▼ (2) 능력 표 ▼▼▼ --> 
+
+<style>
+  table.m-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3C2E21; 
+  }
+  table.m-table th, 
+  table.m-table td {
+    border: 1.5px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.m-table tr td:first-child {
+    background-color: #f5f5f5; /* 배경색 */
+    color: #000000;  
+    width: 100px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.m-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+    text-align: left;
+  }
+</style>
+
+<table class="m-table">
+  <tr>
+    <td> <b>자기 합리화<br>Self rationalization</b> </td>
+
+    <td><b>수량: 2<br>쿨타임: 90초</b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>이방인은 직접 만난 동료와 <b><span style="color:#588FBF;">10</span></b>초간의 일방적인 내면 호소를 통해 자신의 현재 공포치를 동료에게 적용시킵니다. 자기 합리화는 행동불능 상태에서 시전이 불가능하며 합리화 시간 동안 이방인과 해당 생존자는 이동과 모션이
+불가능합니다.<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>이방인의 내면 호소는 행동불능 상태에서 시전이 불가능하지만 자기 합리화에 이용되는 생존자는 광기의 의자에 묶이지 않는 한 내면 호소에 휘말릴 수 있습니다. 행동불능 상태인 생존자에게 두루마리를 사용할 시 1딜을 회복, 그 외 모든 부상 상태의 생존자에게 두루마리를 사용할 경우 체력을 모두 회복합니다.</td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>이별의 발자취<br>Vestige</b> </td>
+
+    <td>이름을 남길 수 없다면 가죽이라도 남기고 싶었습니다. 이방인의 자기 합리화에 이용된 생존자는 이방인이 광기의 의자에 처음 묶였을 때와 두 번째로 묶였을 때 각 <b><span style="color:#588FBF;">10%</span></b>의 해독 가속을 중첩해 부여받습니다.<a class="text5" id="ref5" href="#각주5"><sup>[5]</sup></a></td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>아이러니<br>Irony</b> </td>
+
+    <td>죽음 속에서 다짐이 떠오릅니다. 판자와 창틀 모션 속도가 <b><span style="color:#588FBF;">10%</span></b> 증가합니다.</td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>현실도피<br>Escapism</b> </td>
+
+    <td>다가올 진실을 목도하는 것은 생각보다 두려운 일입니다. 이방인의 누적 해독진도가 <b><span style="color:#588FBF;">200%</span></b>를 초과하면 해독 속도와 탈출구 개문 속도가 <b><span style="color:#588FBF;">10%</span></b> 감소합니다.</td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>무소유<br>Non owned</b> </td>
+
+    <td>목적을 위한 단 하나의 수단을 잃은 자는 더 이상 아무것도 가질 필요가 없습니다. 이방인은 자신의 두루마리를 전부 사용하여도 기타 아이템 습득이 불가능합니다.</td>
+  </tr>
+</table>
+</details>
+
+<!-- ▼▼▼ (3) 스토리 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-"></a><a href="#목차">3.</a> 스토리</h2></summary>
+
+<!-- ▼▼▼ (3-1) 캐릭터 설정 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-1"></a><a href="#목차">3.1.</a> 캐릭터 설정</h2></summary>
+
+<!-- ▼▼▼ (3-1) 내용 ▼▼▼ --> 
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>세나 왓슨</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>이방인</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>23</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>160cm</td>
+  </tr>
+  <tr>
+    <td> <b>몸무게</b> </td>
+    <td>40kg</td>
+  </tr>
+  <tr>
+    <td> <b>국적</b> </td>
+    <td><p class="text1"><a href="https://namu.wiki/w/%EC%98%81%EA%B5%AD" target="_blank"> <img src="https://i.postimg.cc/NFX5GGWx/IMG-1099.png" style="height:1.1em; vertical-align:middle;"> 영국</a><a class="text6" id="ref6" href="#각주6"><sup>[6]</sup></a> </p> </td>
+  </tr>
+  <tr>
+    <td><b>출신 계급</b></td>
+    <td>타지의 이국인<a class="text7" id="ref7" href="#각주7"><sup>[7]</sup></a></td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td> 독서, 명상, 다과회 </td>
+  </tr>
+  <tr>
+    <td><b>장기</b></td>
+    <td> 속독, 타인 이해 </td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td> 안정감, 동기부여, 공감 </td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td><p class="text1"><a href="https://namu.wiki/w/%EB%B0%98%EB%94%A7%EB%B6%88%EC%9D%B4" target="_blank">반딧불이</a>, 등불의 흔들리는 빛 </p></td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td><p class="text1"><a href="https://namu.wiki/w/%ED%8F%AD%EB%B0%9C%EB%AC%BC" target="_blank">폭발물</a>, 천둥 </p></td>
+  </tr>
+
+</table>
+</details>
+
+<!-- ▼▼▼ (3-2) 배경 스토리 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-2"></a><a href="#목차">3.2.</a> 배경 스토리</h2></summary>
+
+<!-- ▼▼▼ (3-2) 내용 ▼▼▼ --> 
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>진실한 마음을 마주할 수 있는 상대는 세상에 몇 없는 법입니다. 그녀가 이곳에서 또 다시 마주하게 될 전말은 무엇일까요?</td>
+ </tr>
+
+</table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; -webkit-text-size-adjust: 100%; background-color: rgb(255, 255, 255);"> <div style="height:10px;"></div> 가족을 따라 머나먼 이국 땅까지 와 타지 생활을 시작했지만 모종의 사고로 인해 가족이 전부 눈 앞에서 죽음을 맞이한다. 트라우마를 숨기고 감정이 결여된 사람처럼 지내던 어느 날, 마지막 잎새처럼 믿었던 </span><font face="Pretendard JP, Pretendard, -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Noto Sans KR, Noto Sans CJK KR, NanumBarunGothic, Roboto, Segoe UI, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif, emoji"><span style="text-decoration-color: currentcolor; transition: color 0.05s ease-in; cursor: pointer; -webkit-text-size-adjust: 100%;"><a href="https://night-of-nostalgia.web.app/posting/628J2I5rUQr7bvSLR56g">누군가</a></span></font><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; -webkit-text-size-adjust: 100%; background-color: rgb(255, 255, 255);"><a href="https://night-of-nostalgia.web.app/posting/628J2I5rUQr7bvSLR56g"></a>마저 사라져버리자 이성과 정신을 동시에 잃어버린다. <div style="height:10px;"></div>마지막으로 가족의 죽음을 눈에 담았던 그날처럼 그의 죽음 역시 본다면 완전한 죽음, 즉 안식을 취할 수 있으리라 믿고 장원으로 향한다.</span></p>
+</details>
+
+<!-- ▼▼▼ (3-3) 배경 추리 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-3"></a><a href="#목차">3.3.</a> 배경 추리</h2></summary>
+
+<!-- ▼▼▼ (3-3) 내용 ▼▼▼ --> 
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>1. 꿈</b></p>따스한 부모님과 아름다운 고향, 저는 향기로운 품에 안겨 살았습니다.<br><br>일기장: 저는 커서 세계 이곳저곳을 여행하고 싶어요!</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>2. 불안한 세상</b></p>전쟁은 내게 잔인함을 보여주진 않았으나, 불안함을 배우게끔 했습니다. 부모님은 바빴고 제가 할 수 있는 것도 해야 하는 것도 없었습니다.<br><br>사진 한 장: 모두가 잠든 채로 죽은 것처럼 고요한 마을의 모습</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>3. 순항</b></p>하지만 그것이 불행의 서막이었다는 것은 아무도 알지 못했습니다.<br><br>사진 한 장: 구멍이 뚫려있는 영국-네팔행 배편 티켓이 다이어리 사이에 꽂혀있습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>4. 따스함</b></p>대체 얼마만의 감정일까요? 따뜻하다 못해 뜨거워서 눈시울이 붉어졌습니다.<br><br>갈 길을 잃은 미아에게 손을 내밀어주는 당신들의 온정이 내 불안했던 세계를 덮었습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>5. 개전</b></p>매일 집에선 소독약 냄새가 났고, 매 순간 죄스러웠습니다.<br><br>사진 한 장: 불길에 타고 있는 일기장 한 권.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>6. 인명</b></p>목숨이 소중하다는 사실을 알아야 할 이들은 따로 있지 않나요?<br><br>사진 한 장: 이방인의 가족, 중년 여성과 군복을 입은 청년이 함께 자리하고 있습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>7. 부조리</b></p>나는 미소 짓는 법을 잊었고, 남겨지는 법을 몰랐기에, 살아가는 법을 잃었다.<br><br>일간지 1면: 사고인가 살인인가? 원인 불명의 폭발로 왓슨 부부 구호소서 즉사.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>8. 폭풍전야</b></p> 죽음과 삶, 빛과 어둠. 어느 쪽을 선택해야 할까요? <br><br>위태로운 내게 누군가 살아가야 한다고 말했습니다. 그게 마치 내 업처럼 느껴졌습니다…</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>9. 기약</b></p>곧 돌아오겠다는 말을 믿을 수 밖에 없었습니다. 당신의 말이 지금 나를 살게 하고 있기 때문에. <br><br>사진 한 장: 의자에 앉아 편지를 읽고 있는 여자의 표정이 좋지 않습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>10. 운명</b></p>이제 당신의 어떤 것도 닿지 않아요.<a class="text8" id="ref8" href="#각주8"><sup>[8]</sup></a> 가슴 속 깊은 곳이 텅 빈 느낌, 실로 이방인입니다.<br><br>"사실 알고 있었을지도 모릅니다. 나의 모든 순간은 종말로 내달리고 있었음을. 이제 운명을 두 눈으로 봐야겠어요"</td></tr></tbody></table></p>
+
+<hr style="border: none; height: 1px; background: #dddddd; margin: 30px 0;">
+
+<table class="text1" style="border-collapse: collapse; width: 100%; border: 1px solid #dddddd;" data-ke-align="alignLeft"><tbody><tr><td style="width: 100%; border: 1px solid gray; border-top: 5px solid orange; padding: 12px;"><span style="font-size: 1.3em;">이 문서에</span> <a style="color: #0275d8; font-size: 1.3em;" href="https://namu.wiki/w/%EC%8A%A4%ED%8F%AC%EC%9D%BC%EB%9F%AC" target="_blank" rel="noopener">스포일러</a><span style="font-size: 1.3em;">가 포함되어 있습니다.</span><br /><br />이 문서가 설명하는 작품이나 인물 등에 대한 줄거리, 결말, 반전 요소 등을 직·간접적으로 포함하고 있습니다.</td></tr></tbody></table>
+
+<div style="height:10px;"></div>
+
+이후 장원으로 간 이방인은 게임 도중 용병이 남겨둔 흔적을 발견하고, 죽었다고 생각했던<a class="text9" id="ref9" href="#각주9"><sup>[9]</sup></a> 그가 아직 살아있을 수도 있다는 충격에 <b>의식불명</b> 상태에 빠진다.
+
+</details>
+</details>
+
+<!-- ▼▼▼ (3-4) 인물 관계 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4"></a><a href="#목차">3.4.</a> 인물 관계</h2></summary>
+
+<!-- ▼▼▼ (3-4) 내용 ▼▼▼ -->
+
+<p class="text1">
+ <b>장원에 오기 전</b>
+
+<div style="height:10px;"></div>
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://night-of-nostalgia.web.app/posting/628J2I5rUQr7bvSLR56g"><b>나이브</b></a> <a href="https://night-of-nostalgia.web.app/posting/628J2I5rUQr7bvSLR56g"><b>수베다르</b></a><a class="text10" id="ref10" href="#각주10"><sup>[10]</sup></a></p>부모를 잃고 남겨진 이방인에게 다시 살아갈 힘을 준 인물. 돈을 벌기 위해 이곳저곳 의뢰를 받아 이동하는 나이브 대신 이방인이 나이브의 어머니를 보살피고 있다. 어렸을 때부터 왕래해 친밀한 관계로 발전했다. 위태로운 상황 속에서도 서로를 지지하고 아꼈으나 그것만으로는 평범한 삶을 누릴 수 없었다. 용병은 그녀에게 곧 돌아오겠다는 말을 남기고 장원으로 향한다.
+
+<hr style="border: none; height: 1px; background: #dddddd; margin: 20px 0;">
+
+<b>장원에 온 후</b><br><br>
+
+</p>
+</details>
+</details>
+
+<!-- ▼▼▼ (4) 이어보기 ▼▼▼ -->
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차4"></a><a href="#목차">4.</a> 이어보기</h2></summary>
+
+<!-- ▼▼▼ (4) 내용 ▼▼▼ -->
+
+<p class="text1">▶ &nbsp;<span style="display: inline-block; white-space: nowrap;">
+            <a class="wikigreen" href="https://namu.wiki/w/%EC%82%AC%EC%9A%A9%EC%9E%90:mexc1" target="_blank"> <td class="wt-detail"><img src="https://i.postimg.cc/hvbbBxN3/IMG-1082.jpg" style="height:1em; vertical-align:middle;">
+                <span class="wikigreentext">상세 페이지 이동</span>
+            </a>
+        </span>&nbsp;<br></p>
+</details>
+
+<!-- ▼▼▼ 각주 구분선 ▼▼▼ -->
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<!-- ▼▼▼ 각주란 ▼▼▼ -->
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 직업과 영어번역이 다르다. stranger보다 이방인의 장원 입성을 잘 설명해주는 stray를 채택. 본래 직업이 아니므로 큰따옴표가 붙는다.
+</p>
+<p id="각주2">
+  <a href="#ref2">[2]</a> 직접 만난 동료와 10초간 상호작용해 현재 자신의 공포치를 타인에게 동일하게 부여한다. 자세한 것은 이어보기 참고.
+</p>
+<p id="각주3">
+  <a href="#ref3">[3]</a> 2회 사용가능. 소모 이후 다른 아이템 소지 불가능.
+</p>
+<p id="각주4">
+  <a href="#ref4">[4]</a> 두루마리 모두 소진 시 달성 가능
+</p>
+<p id="각주5">
+  <a href="#ref5">[5]</a> 자기 합리화가 캔슬되어도 이별의 발자취는 중첩된다.
+</p>
+<p id="각주6">
+  <a href="#ref6">[6]</a> 북아일랜드 출신
+</p>
+<p id="각주7">
+  <a href="#ref7">[7]</a> 후술할 사건들로 인해 출신과 위치 따위는 무의미해졌다.
+</p> 
+<p id="각주8">
+  <a href="#ref8">[8]</a> 용병의 편지가 끊겼다.
+</p>
+<p id="각주9">
+  <a href="#ref9">[9]</a> 사실 이방인은 정신적으로 너무 몰린 상태라 제 운명은 불행만을 향하고 있다는 것을 확인받고자, 즉 용병이라는 하나남은 인연마저 죽었다는 것을 확인한 후 자신의 불행한 삶을 미련없이 끝내려 장원에 온 것이다. 하지만 살아있을 수도 있다는 떡밥이…
+</p>
+<p id="각주10">
+  <a href="#ref10">[10]</a> 제5인격 생존자 용병. 자세한 것은 링크 참고.
+</p>
+
+</div>
