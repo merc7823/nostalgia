@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제5인격 '교사'</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff; /* 전체 흰 배경 */
+      color: #222;
+      font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR";
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<!-- ▼▼▼ 기본 설정란 ▼▼▼ -->
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">'교사'</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 敎師  ·  Teacher<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="00이미지링크00" width="100%" />
+            </div>
+          </td>
+        </tr>
+        
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>미라 이눌라</b><br>Meara Enola</br>梅拉 · 埃诺拉</br>ミイラ  · イノラ</br></td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">?월 ?일</td></tr>
+<tr><td class="wt-color"><b>액티브 능력</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>패시브 능력</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>버프</b></td><td class="wt-detail">???<a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a></td></tr>
+<tr><td class="wt-color"><b>디버프</b></td><td class="wt-detail">???</td></tr>
+
+<tr><td class="wt-color"><b>유형</b></td><td class="wt-detail"><img src="https://i.postimg.cc/hvB2vH9d/muje988-20251111130324.png" style="height:1.7em; vertical-align:middle;"> <img src="https://i.postimg.cc/QC1r9262/muje988-20251027220337.png" style="height:1.7em; vertical-align:middle;"></td></tr>
+
+<tr><td class="wt-color"><b>난이도</b></td><td class="wt-detail"><img src="https://i.postimg.cc/XYZpHJz4/muje984-20251027220027.png" style="height:1.5em; vertical-align:middle;"></td></tr>
+
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><img src="아이템이미지" style="height:1.6em; vertical-align:middle;"><b> 작은 칠판과 분필</b></td></tr></td></tr>
+<tr><td class="wt-color"><b>업적</b></td><td class="wt-detail">???</td></tr>
+      </tbody>
+    </table>
+
+<div style="height:10px;"></div>
+
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 외적 특성<br />
+<a style="padding-left: 0px;" href="#목차3-">3.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-1">3.1</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차3-2">3.2</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-3">3.3</a> 배경 추리<br />
+<a style="padding-left: 20px;" href="#목차3-4">3.4.</a> 인물 관계<br />
+<a style="padding-left: 0px;" href="#목차4">4.</a> 이어보기<br />
+        </td></tr></tbody></table>
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차"><b>1.</a> 개요</b></h2></summary>
+<table class="wiki-img-sing"><tbody><tr><td style="border-color: #2d3444;"><iframe src="https://youtu.be/_R2nZa8grno?si=zXR5mcMhG4sMh4vk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen="true"></iframe></td></tr>
+<tr><td style="background-color: #2d3444; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: rgb(255, 255, 255);"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;"><b>'교사' EP 'Meara's Song'</b></span></span></span><br></td></tr>
+     <tr><td style="background-color: #ffffff; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5 !important;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: #2d3444;"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;">
+              <details style="margin-top: 0px; margin-bottom: 0px !important;">
+        <summary style="cursor: pointer; font-weight: bold; padding: 0px; background-color: #ffffff; color: #2d3444; text-align: center;">
+<b>가사 보기 ▼ </b>
+        </summary>
+        <div style="padding: 10px; background-color: #ffffff; color: #2d3444; line-height: 1.5;">
+         준비중
+        </details>
+</span></span></span></td></tr>
+</tbody>
+</table>
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">"누군가의 통제와 간섭받지 않는 자유로운 삶을 살고 싶어요."</span><br></td></tr></tbody></table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);">제5인격의 생존자. 내향적인 성격으로 말 수가 적고 낯을 많이 가려 친해지려면 꽤나 시간이 걸린다. 존재감이 없다는 말을 들을 정도로 조용해서 혼자 보내는 일이 많다.</span><br></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차"><b>2.</a> 외적 특성</b></h2></summary>
+
+<style>
+  table.m-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3C2E21; 
+  }
+  table.m-table th, 
+  table.m-table td {
+    border: 1.5px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.m-table tr td:first-child {
+    background-color: #f5f5f5; /* 배경색 */
+    color: #000000;  
+    width: 100px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.m-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+    text-align: left;
+  }
+</style>
+
+<table class="m-table">
+  <tr>
+    <td> <b>작은 칠판과 분필</b> </td>
+
+    <td><b>수량: <br>쿨타임: </b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>???</td>
+  </tr>
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-"></a><a href="#목차"><b>3.</a> 스토리</b></h2></summary>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-1"></a><a href="#목차"><b>3.1.</a> 캐릭터 설정</b></h2></summary>
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>미라 이눌라</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>'교사'</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>20</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>151cm</td>
+  </tr>
+  <tr>
+    <td> <b>몸무게</b> </td>
+    <td>???</td>
+  </tr>
+  <tr>
+    <td> <b>국적</b> </td>
+    <td><p class="text1"><a href="국가링크" target="_blank"> <img src="국기" style="height:1.1em; vertical-align:middle;"> ???</a></p> </td>
+  </tr>
+  <tr>
+    <td><b>출신 계급</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>장기</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td></td>
+  </tr>
+
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-2"></a><a href="#목차"><b>3.2.</a> 배경 스토리</b></h2></summary>
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>"누군가의 통제와 간섭받지 않는 자유로운 삶을 살고 싶어요."</td>
+ </tr>
+
+</table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; -webkit-text-size-adjust: 100%; background-color: rgb(255, 255, 255);"> <div style="height:10px;"></div> 
+미라는 태어날 때부터 경제적으로는 부족함 없는 가정에서 자랐다. 그러나 차갑고 엄격한 부모의 간섭과 통제가 늘 그림자처럼 따라붙었다. 게다가 태어날 때부터 눈에 띄던 흰 속눈썹은 또래 아이들 사이에서 이질감의 대상이 되었고 이유 없는 따돌림과 조롱은 어린 미라의 마음에 깊은 상처를 남겼다. 자신을 이해해 주지 않는 부모와 이유 없이 상처를 주는 또래들 사이에서 미라는 점점 내면의 문을 닫아갔다. 그래도 '착한 딸'<a class="text2" id="ref2" href="#각주2"><sup>[2]</sup></a>이라는 역할을 벗어날 수 없었기에 늘 기대에 부응하려 애썼고 성적 또한 늘 상위권을 유지했다.
+<div style="height:10px;"></div> 
+그렇게 버텨오던 어느 날 다섯 살이 되던 해에 동생이 태어났다. 미라는 부모가 이제는 자신에게도 따뜻해질 수 있지 않을까 하는 희망을 품었다. 그러나 부모는 새로 태어난 동생에게만 온갖 사랑과 관심을 쏟았고 미라는 점점 더 소외되어갔다. 사랑받기 위해 애썼지만, 돌아오는 건 냉담한 시선뿐이었다. 시간이 흐를수록 자존감은 끝없이 무너져 내렸다. 절망 속에서도 미라는 유일하게 품고 있던 꿈, '교사'<a class="text3" id="ref3" href="#각주3"><sup>[3]</sup></a>가 되기 위해 애써 마음을 다잡았다
+<div style="height:10px;"></div> 
+하지만 현실은 냉혹했다. 아이들의 괴롭힘은 점점 노골적으로 변해갔다. 지속되는 괴롭힘과 외면 속에서 미라는 결국 '교사'라는 꿈마저 놓아버렸다. 무너진 몸과 마음은 점점 생기를 잃어갔고 삶에 대한 의지도 서서히 꺼져갔다. 그렇게 피폐해진 끝에 그녀는 조용히 이 세상과 작별할 결심을 하게 된다.
+<div style="height:10px;"></div> 
+모든 준비를 마쳤을 무렵 미라는 문득 자신이 얼마나 작고 무력한 존재가 되었는지를 실감했다. 그 순간 노크 소리가 들려왔다. 낯선 기척이었지만, 이상하게도 받아들여야 할 것 같은 예감이 들었다. 문을 열자 편지 한 장이 문 앞에 놓여 있었다.
+<div style="height:10px;"></div> 
+그 자리에서 조심스럽게 편지를 연 미라는 그것이 단순한 우연이 아님을 곧 깨달았다. 편지에는 마치 그녀의 과거와 상처 고통을 모두 알고 있다는 듯한 내용이 적혀 있었고 마지막에는 이렇게 쓰여 있었다.
+<div style="height:10px;"></div> 
+<b>"네가 원했던 교사의 삶을 이뤄주겠다. 장원으로 오라."</b>
+<div style="height:10px;"></div> 
+그 문장이 미라의 마음을 붙잡았다. 끝이라고 여겼던 삶의 마지막 문턱에서 그녀는 다시 한번 문 너머의 세계로 발을 내디뎠다.
+
+</span></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-3"></a><a href="#목차"><b>3.3.</a> 배경 추리</b></h2></summary>
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>1. 눈이 내리던 날</b></p>온 세상이 단 한 사람만을 위해 숨을 죽이고 있었죠.<br><br>런던으로 부친 서신: "이눌라 경, 이렇게 사랑스러운 따님이 태어났다는 사실을 왜 알리지 않으신 겁니까? 꼭 겨울날을 닮은 여자아이더군요. 눈처럼 희고, 설원처럼 고요한···."</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>2. 진주</b></p>보석으로서의 가치를 지닌 진주는 극소수에 불과합니다.<br><br> 낡은 사진 한장: 단정한 차림새, 그러나 체구보다 조금 더 큰 옷을 입은 여자아이가 어색하게 고개를 숙이고 있다. 뒤쪽에 서 있는 어른은 부모가 아닌 가정교사로 보인다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>3. 착한 아이</b></p>그렇다면 스스로를 깎아서라도 보석이 되어야겠지요.<br><br>미라 이눌라의 성적표: '틀린' 문제가 거의 없다. '가끔씩 미라 양은 도무지 어린아이 갈지 않아요.' 다소 염려 어린 문구가 함께 적혀 있다. </td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>4. 달그림자</b></p>너는 달빛, 나는 그림자.<br><br>어설프게 접은 종이 장미꽃과 편지지: 끝부분이 구겨져 있다. '첫 번째 생일을 맞이한 소중한 내 동생에게.'</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>5. 사랑</b></p>나는 그것만을 원했는데······.<br><br>'사랑'에 대한 글을 써 보라고 했어요. 그런데 다른 학생도 아니고 미라 양이 백지를 내 버리지 뭐예요.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>6. 등대</b></p>조금은 다른 어른이 되어, 누군가의 어린 시절을 구할 수 있다면.<br><br>학급 상담 기록: 장래희망은 교사입니다···. 저와 같은 기분을 느끼는 아이들에게 손을 내밀어 주고 싶기 때문입니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>7. ENOLA</b></p>내 이름을 거꾸로 읽어 보세요.<br><br>일기 한 페이지: 오늘에서야 알았다, 내가 영원히 외톨이일 것이라는 사실을. 누구도 내 손을 잡지 않을 거라는 사실을. 조금 더 빨리 알았어야 하는데. 바보 같은 나 자신을 절대로 용서할 수 없다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>8. 작별</b></p>안녕, 다시는 만나지 말아요.<br><br>유서 따위를 쓸 이유도 없습니다. 읽을 사람이 없으니까요.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>9. 전조</b></p>악장이 바뀌지 않는 음악은 없어.<br><br>발신자 미상의 편지: "네가 원하던 교사로서의 꿈을 이루어 주겠다."</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>10. 나를 구하는 방법</b></p>'나'의 어린 시절을 구할 수 있다면.<br><br>'스스로를 용서할 수 있는 마지막 기회야.'</td></tr></tbody></table></p>
+
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4"></a><a href="#목차"><b>3.4.</a> 인물 관계</b></h2></summary>
+
+<p class="text1">
+
+<b>장원에 온 후</b>
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/기자(제5인격)"><b>기자</b></a></p>첫 친구이자 소중한 동료관계이다. 그녀의 당당한 모습의 부러워한 미라는 앨리스를 동경하기 시작했다. 앨리스는 특별하게 남이 부러워할 정도인 삶을 산 건 아니라 생각하지만, 본인을 동경한다는 사람이 있다는 건 나쁜 게 아니니 미라와 함께 장원에 대해 파헤치기로 한다.
+</p>
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차4"></a><a href="#목차"><b>4.</a> 이어보기</b></h2></summary>
+
+<p class="text1">▶ &nbsp;<span style="display: inline-block; white-space: nowrap;">
+            <a class="wikigreen" href="https://namu.wiki/w/기자(제5인격)" target="_blank"> <td class="wt-detail"><img src="https://i.postimg.cc/hvbbBxN3/IMG-1082.jpg" style="height:1em; vertical-align:middle;">
+                <span class="wikigreentext">상세 페이지 이동</span>
+            </a>
+        </span>&nbsp;<br></p>
+</details>
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 문제를 맞출 시 해독 속도 10% 증가
+</p>
+<p id="각주2">
+  <a href="#ref2">[2]</a> 착한 아이 증후군
+</p>
+<p id="각주3">
+  <a href="#ref3">[3]</a> 정말 내가 원하는 꿈인가?
+</p>
+
+</div>
