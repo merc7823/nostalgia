@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제5인격 해양학자</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff; /* 전체 흰 배경 */
+      color: #222;
+      font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR";
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">해양학자</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 海洋学家  ·  Oceanographer  ·  海洋学者<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="https://i.postimg.cc/nhPRBkGm/IMG-7179.webp" width="100%" style="display:block;">
+            </div>
+          </td>
+        </tr>
+        
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>메이힐 베를</b><br>Meyhil Veril</br>梅希尔 · 维里尔</br>メイヒル · ベリル</br></td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">1월 6일</td></tr>
+<tr><td class="wt-color"><b>액티브 능력</b></td><td class="wt-detail">해류 관측</td></tr>
+<tr><td class="wt-color"><b>패시브 능력</b></td><td class="wt-detail">신규 발견</td></tr>
+<tr><td class="wt-color"><b>버프</b></td><td class="wt-detail">인내심</td></tr>
+<tr><td class="wt-color"><b>디버프</b></td><td class="wt-detail">오만불손, 그리운 추억</td></tr>
+
+<tr><td class="wt-color"><b>유형</b></td><td class="wt-detail"><img src="https://i.postimg.cc/QC1r9262/muje988-20251027220337.png" style="height:1.7em; vertical-align:middle;"></td></tr>
+
+<tr><td class="wt-color"><b>난이도</b></td><td class="wt-detail"><img src="https://i.postimg.cc/SNykvSFn/muje984-20251114233700.png" style="height:1.5em; vertical-align:middle;"></td></tr>
+
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><img src="아이템이미지" style="height:1.6em; vertical-align:middle;"><b> 표류병</b></td></tr></td></tr>
+<tr><td class="wt-color"><b>업적</b></td><td class="wt-detail">목적지 도달</td></tr>
+      </tbody>
+    </table>
+
+<div style="height:10px;"></div>
+
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 외적 특성<br />
+<a style="padding-left: 0px;" href="#목차3-">3.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-1">3.1</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차3-2">3.2</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-3">3.3</a> 배경 추리<br />
+<a style="padding-left: 20px;" href="#목차3-4">3.4.</a> 인물 관계<br />
+<a style="padding-left: 0px;" href="#목차4">4.</a> 이어보기<br />
+        </td></tr></tbody></table>
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차"><b>1.</a> 개요</b></h2></summary>
+<table class="wiki-img-sing"><tbody><tr><td style="border-color: #2d3444;"><iframe src="https://www.youtube.com/embed/53vw9miqxAk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen="true"></iframe></td></tr>
+<tr><td style="background-color: #2d3444; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: rgb(255, 255, 255);"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;"><b>해양학자 테마곡 'Sometimes'</b></span></span></span><br></td></tr>
+     <tr><td style="background-color: #ffffff; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5 !important;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: #2d3444;"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;">
+              <details style="margin-top: 0px; margin-bottom: 0px !important;">
+        <summary style="cursor: pointer; font-weight: bold; padding: 0px; background-color: #ffffff; color: #2d3444; text-align: center;">
+<b>가사 보기 ▼ </b>
+        </summary>
+        <div style="padding: 10px; background-color: #ffffff; color: #2d3444; line-height: 1.5;">
+on a sunny day, i wake up <br>
+화창한 아침에 나는 일어나<br>
+and the light drains in<br>
+햇빛이 들어와<br>
+and automatically, i reach out<br>
+기계처럼 나는 손을 뻗어<br>
+and i feel the warm weight on my fingers<br>
+손가락에 따뜻한 무언가가 느껴져<br>
+yellow with the strain, I guess, I let up<br>
+긴장해서 그런가봐, 진정해<br>
+kick the rubble on the eightfold<br>
+여덟번 돌맹이를 발찼어<br>
+i see myself am i dreaming again cos it feels like<br>
+자신이 꿈 꾸는 것이 보여, 왜냐하면<br>
+<br>
+all my life i've been so sure i'm alright<br>
+평생 나는 내 인생이 괜찮다고 생각했어<br>
+but sometimes i'm lonely<br>
+하지만 가끔씩 외로울 때도 있어<br>
+and the only things i care about<br>
+내가 유일하게 소중해하는 것들이<br>
+fall apart like macaroni<br>
+마카로니처럼 산산히 조각나<br>
+only for today<br>
+하지만 오늘 뿐만이야<br>
+<br>
+i let it fall away and come down<br>
+떨어졌다가 내려오기를 기다려<br>
+let it dress me up<br>
+내 옷을 입혀<br>
+and as it i knew it would, there's no doubt<br>
+그리고 그럴 줄을 알았어, 의심하지 않았어<br>
+just a troubadour tied to my mooring<br>
+계류장에 묶여 달린 음유시인<br>
+staring at my chains again, they're cut off<br>
+내 사슬을 바라봐, 잘라져있어<br>
+but i won't get out<br>
+하지만 탈출하지 않겠어<br>
+i see myself as a marionette, yeah it feels like<br>
+나는 꼭두각시니까, 그래 마치<br>
+<br>
+all my life i've been so sure i'm alright<br>
+평생 나는 내 인생이 괜찮다고 생각했어<br>
+banging my drum, blow the fife, circle the pain all night<br>
+드럼을 두드리며, 피리를 불어, 온밤 고통을 빙빙 돌아<br>
+<br>
+but sometimes i'm lonely<br>
+하지만 가끔씩 외로울 때도 있어<br>
+and the stupid things i think about<br>
+나의 바보같은 생각들이<br>
+call my name<br>
+내 이름을 불러<br>
+seems like i'm only waiting for today<br>
+나는 오늘을 기다릴 뿐인가봐<br>
+<br>
+you can live your life this way, it's true<br>
+이렇게 인생을 살아도 괜찮아, 정말이야<br>
+while the old folk pray for tomorrow<br>
+어른들은 ‘내일’을 기다리지만<br>
+i'm waiting for today<br>
+나는 ‘오늘’을 기다리고 있어<br>
+<br>
+all my life i've been so sure i'm alright<br>
+평생 나는 내 인생이 괜찮다고 생각했어
+        </details>
+</span></span></span></td></tr>
+</tbody>
+</table>
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">세상이 동화가 아님을 알게 된 소녀는 표류병 속에 자신의 이상을 담았습니다.</span><br></td></tr></tbody></table>
+
+<div style="height:10px;"></div>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);">시즌 00에 출시된 제5인격의 생존자 캐릭터. 팀원에게 표류병을 흘려보내 일정 시간동안 상호작용 속도 증가, 이속 증가 등 여러 버프를 주는 보조형 생존자이다.</span><br></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차"><b>2.</a> 외적 특성</b></h2></summary>
+
+<style>
+  table.m-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3C2E21; 
+  }
+  table.m-table th, 
+  table.m-table td {
+    border: 1.5px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.m-table tr td:first-child {
+    background-color: #f5f5f5; /* 배경색 */
+    color: #000000;  
+    width: 100px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.m-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+    text-align: left;
+  }
+</style>
+
+<table class="m-table">
+  <tr>
+    <td> <b>해류 관측</b> </td>
+    <td><b>쿨타임: 45초</b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>해양학자는 표류병을 소지하고 있으며, 팀원에게 표류병을 흘려보낼 수 있습니다. 표류병을 받은 팀원이 심음 범위 내에 있을 시 <b><span style="color:#588FBF;">30</span></b>초동안 창틀/판자 상호작용 속도가 <b><span style="color:#588FBF;">15%</span></b> 상승하며, 심음 범위 내에 없을시 <b><span style="color:#588FBF;">20</span></b>초동안 해독 속도가 <b><span style="color:#588FBF;">15%</span></b> 상승합니다.</td>
+  </tr>
+</table>
+<div style="height:10px;"></div>
+<table class="m-table">
+  <tr>
+    <td> <b>신규 발견</b> </td>
+    <td><b>쿨타임: 60초</b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>팀원 중 <b><span style="color:#588FBF;">2</span></b>명 이상이 건강 상태일 때 표류병을 받은 팀원과 해양학자 본인은 <b><span style="color:#588FBF;">1</span></b>초동안 이속이 <b><span style="color:#588FBF;">30%</span></b> 상승합니다.</td>
+  </tr>
+</table>
+<div style="height:10px;"></div>
+<table class="m-table">
+  <tr>
+    <td> <b>인내심</b> </td>
+    <td>해양학자는 긴 인고의 세월을 견뎠습니다. 광기의 의자에서 날아가는 속도가 <b><span style="color:#588FBF;">15%</span></b> 감소합니다.</td>
+  </tr>
+</table>
+<div style="height:10px;"></div>
+<table class="m-table">
+  <tr>
+    <td> <b>오만불손</b> </td>
+    <td>해양학자는 귀한 집안에서 자라 체력이 약합니다. 창틀/판자 모션 속도가 <b><span style="color:#588FBF;">15%</span></b> 감소합니다.</td>
+  </tr>
+</table>
+<div style="height:10px;"></div>
+<table class="m-table">
+  <tr>
+    <td> <b>그리운 추억</b> </td>
+    <td>해양학자는 여전히 과거를 헤매고 있습니다. 대문 여는 속도가 <b><span style="color:#588FBF;">20%</span></b> 감소합니다.</td>
+  </tr>
+</table>
+
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-"></a><a href="#목차"><b>3.</a> 스토리</b></h2></summary>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-1"></a><a href="#목차"><b>3.1.</a> 캐릭터 설정</b></h2></summary>
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>메이힐 베를</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>해양학자</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>24</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>158cm</td>
+  </tr>
+  <tr>
+    <td> <b>몸무게</b> </td>
+    <td>42kg</td>
+  </tr>
+  <tr>
+    <td><b>출신 계급</b></td>
+    <td>상위 귀족</td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td>해양 조사</td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td>낙천적, 배신감, 그리워하는 사람<a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a></td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td>호숫가를 나란히 걷기</td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td>비평등한 것, 호수마을 출신</td>
+  </tr>
+
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-2"></a><a href="#목차"><b>3.2.</a> 배경 스토리</b></h2></summary>
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>세상이 동화가 아님을 알게 된 소녀는 표류병 속에 자신의 이상을 담았습니다.</td>
+ </tr>
+
+</table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; -webkit-text-size-adjust: 100%; background-color: rgb(255, 255, 255);"> <div style="height:5px;"></div> 
+
+  •&nbsp;&nbsp;<b>메이힐이 장원에 오게 된 이야기</b>
+<div style="height:1px;"></div> 
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+<div style="height:15px;"></div> 
+18살, 메이힐은 아버지의 사업으로 이사를 가게 되었습니다. 사업부지의 옆엔 작은 호수마을이 있었고, 마침 심심했던 메이힐은 호수마을에 가게 됩니다. 그것이 이 이야기의 시작입니다.
+<div style="height:10px;"></div> 
+ 호수마을로 놀러갔을 때 메이힐은 물가에서 혼자 앉아있는 소녀를 발견합니다. 신비로운 모습에 이끌린 메이힐은 그녀에게 다가가 인사를 하였으나 조금 놀란 듯 바라보며 입을 뻐끔댈 뿐 답장은 오지 않았습니다. 메이힐은 계속 기다렸습니다. 그 때 호수마을의 주민으로 보이는 한 사람이 다가왔습니다. 그는 즉시 메이힐에게 다가와 자리를 떠날 것을 권했습니다. 메이힐은 알 수 있었습니다. 그는 그 호의를 바라지 않는다는 것을요. 또 그는 메이힐을 보자 지나치게 경계했고, 메이힐의 신분을 알게되자 다음부턴 호수마을에 들르지 조차 말라 으름장을 놓았습니다. 메이힐은 어안이 벙벙해져 호수마을을 떠났습니다. 그것이 첫 날의 기억이었습니다.
+<div style="height:10px;"></div> 
+ 하지만 메이힐은 세상의 이면을 알지 못했고, 여전히 그 소녀에 대해 궁금했고, 그 호기심은 약간의 비밀을 만들기에 충분했습니다. 메이힐은 늦은 밤, 잠자리에서 일어나 다시 마을로 갔습니다. 여전히 물가에는 그 소녀가 앉아있었습니다. 기척을 느꼈는 지 소녀가 돌아보았습니다. 메이힐은 그 소녀에게 반갑게 손을 흔들어보았습니다. 소녀는 조금 당황한 눈치였습니다. 메이힐은 신경쓰지 않았지만요. 메이힐은 그 소녀가 어쩌면 말을 하지 ‘않는 것’이 아닌 ‘못하는 것’이 아닐까 생각했습니다. 그 즉시 질문을 던졌지요. 소녀는 조금 찡그린 채 망설이다 고개를 끄덕였습니다. 메이힐은 주변의 나뭇가지를 하나 주워 소녀에게 물가에 이름을 적어보는 것은 어떻겠냐 권했습니다. 소녀는 ‘그레이스’라고 적었습니다. 메이힐과 그레이스는 그날부로 친구가 되었습니다.
+<div style="height:10px;"></div> 
+ 메이힐과 그레이스는 말 그대로 ‘좋은 친구’가 될 수 있을지 모릅니다. 메이힐은 그날 이후로도 밤마다 물가를 찾아갔고, 그레이스는 한결같이 그곳에 있었습니다. 그녀는 좋게 말해도 착한 성격이 되진 못했지만 내심 메이힐을 밀어내지 않았습니다. 그들은 나뭇가지 하나만으로 소통을 했고 함께 달빛을 바라보았습니다. 메이힐은 그런 시간이 정말 소중하다고 생각했습니다. 하지만 그녀는 몰랐습니다. 꼬리가 길면 밟힐 수밖에 없다는 것을요.
+<div style="height:10px;"></div> 
+ 1년이 지나 19살이 되었을 때, 여느 때와 같이 메이힐은 늦은 밤 그레이스를 찾아갔습니다. 그레이스는 평소와 조금 달랐습니다. 어쩌면 조금은 상냥하고, 더 차분하고— 심지어 자신에게 고맙단 내용의 작은 쪽지 또한 전해주었지요! 메이힐은 당황했지만 기쁘다고, ‘좋은 친구’가 된 것 같다고 생각했습니다. 하지만 그날 밤 호수마을에 갔을 때, 그레이스는 물가에 없었습니다. 이상하다고 생각했지만 그 밤은 조용히 지나갔습니다. 그러나 다음날도, 다다음날도… 계속된 나날에도 자신의 친구는 더 이상 만날 수 없었습니다.
+<div style="height:10px;"></div> 
+ 메이힐은 마을 사람들의 불쾌한 시선에도 불구하고 호수마을에 들어갑니다. 그레이스는 도대체 어디 있을까요? 1년 넘게 지내온 자신의 친구는 어디로 간걸까요? 끊임없이 묻자 메이힐은 끝내 답을 얻을 수 있었습니다. 그레이스를 멋대로 이 마을의 신녀로 취급했지만, 마을에 흉년이 들자 그레이스를 가짜 신녀라며 제물로 바쳐버린 것입니다. 또한 밤마다 누군가와의 만남을 지속하는 것 역시 신녀로서는 해서는 안되는 일이라고 말했죠. 메이힐은 배신감과 동시에 죄책감을 느꼈습니다. 자신과 그레이스의 비밀은 언제부터 들킨 걸까요? 만약 만나지 않았다면 그레이스는 죽지 않았을까요. 하나 확실한 건 1년이 조금 넘는 기간동안 만나온 자신의 ‘친구’는 누군가의 입에서 신녀 따위로 재단되어야할 사람이 아니었습니다. 그레이스는 자신의 확고한 생각이 있었고, 물을 좋아하는 평범한 소녀에 불과했습니다. 메이힐은 자신도 모르는 사이 눈물을 흘리고 있었습니다. 아, 메이힐은 그제서야 그레이스와 함께 만들어가고 싶었던 관계는 ‘좋은 친구’ 따위가 아니었음을 자각하고 절망합니다.
+<div style="height:10px;"></div> 
+ 평생을 온실 속 화초처럼 모든것을 갖고 살아온 메이힐은 처음 겪는 상실을 인정하지 못했습니다. 그레이스가 죽었다는 사실을 완전히 인정하지 못했다는 뜻입니다. 어쩌면 일종의 회피일지도 모릅니다. 메이힐은 저 깊은 물 속에서 그레이스를 찾지 못한다면 죽지도 않은 것이라고 믿고 싶었습니다. 하지만 어떻게 찾아야 할까요? 이 사실을 아버지께 말하면 분명 분노하시겠지만 끝내 그녀를 잊으라고 말할 것입니다. 그리고 메이힐은 가족까지 걱정시키고 싶진 않았습니다. 그 때 메이힐은 어릴 적 책에서 읽었던 직업에 대해 떠올렸습니다. 해양학자. 이거라면 자신이 그레이스를 찾을 수 있을까요?
+<div style="height:10px;"></div> 
+ 이후 메이힐은 아버지에게 자신이 해양학자가 되고 싶다고 밝혔습니다. 아버지는 조금 당황했지만 끝내 메이힐의 선택을 존중해주기로 했습니다. 지원을 받으며 계속해서 공부한 메이힐은 3년 뒤 해양학자가 되었습니다. 하지만 아버지의 일이 끝나 호수마을을 떠나야 할 순간이 왔을 때, 메이힐은 큰 결심을 하게 됩니다. 자신은 이곳에 남겠노라고요. 사실 메이힐은 이쯤 되어선 어렴풋이 알고 있었습니다. 자신은 더 이상 그레이스를 만날 수 없다는 걸요. 그러나 믿고 싶지 않았습니다. 이것조차 일종의 현실도피에 불과할 지 모르지만 적어도 메이힐의 필사적인 마음은 거짓이 아니었습니다.
+<div style="height:10px;"></div> 
+ 메이힐은 이후 계속해서 찾아다니지만 당연히도 그레이스의 흔적은 찾을 수 없었습니다. ‘해양 연구’를 핑계로 현실에서 도망치기도 1년째, 메이힐은 한 초대장을 받게 됩니다. 초대장의 내용은 자신이 그토록 찾는 ‘친구’에 관해 알고 있단 내용이었습니다. 메이힐은 이것이 마지막 희망이라고 직감하여 그 즉시 초대장의 근원지인 장원으로 떠나게 됩니다.
+<div style="height:10px;"></div> 
+
+</span></p>
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-3"></a><a href="#목차"><b>3.3.</a> 배경 추리</b></h2></summary>
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>1. 변화</b></p>인생의 변화란 때때로 아주 작은 일에서부터 시작되곤 합니다.<br><br>"우리는 사업을 위해 잠시 그곳으로 떠나야 한단다. 조금 오랜 시간이 되겠지만, 너라면 견딜 수 있지?"</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>2. 발견</b></p>밤하늘 아래 혼자 동떨어진 그 소녀는 아름답고 신비로워 보였습니다.<br><br>일기 한 편: 물가에서 한 소녀를 보았어. 그런데… 혼자 물장난을 치는 건 심심할 것 같아. 내일도 있다면 말을 걸어봐야겠어!</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>3. 희소성</b></p>어쩌면 우리는 둘도 없는 친구가 될 수 있을지 모릅니다.<br><br>가십 하나: 얘야, 아이야, 너는 절대 신녀님과 가까이하지 않는 것이 좋을 거야. 무슨 일이 생길지 모르니!</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>4. '파랑'</b></p>사고란 본디 급작스럽게 찾아오기 마련입니다.<br><br>소문 하나: 마을에 흉년이 든 이유가 무엇이라고 생각하세요?</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>5. 가치 보존</b></p>그녀는 어디로 갔나요?<br><br>익명의 편지 한 통: 지금이라도 신이 우리를 용서하시길! 그나저나, 밤마다 찾아오던 그 귀족 아가씨는 어쩌지? 젠장, 이래서 외부인은 들이면 안 된다니까…</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>6. 학구열</b></p>처음으로 겪은 상실의 슬픔은 쉽게 사라지지 않습니다.<br><br>전해지지 못한 쪽지 한 장: 내일은 널 오라버니께 소개시켜주고 싶어!</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>7. 침체</b></p>성장하지 못한다면 그곳에 침체될 뿐입니다.<br><br>편지 한 통: 아버지, 전 이곳에 남고 싶어요. 이곳에서 연구를 계속할 거예요. 응원해 주실 거죠?</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>8. 증명</b></p>존재의 증명이란 곧 믿음입니다.<br><br>신문 기사 일부: 베를 가의 여식, 해양학자로서의 첫 발자취…</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>9. 환몽</b></p>세상이 동화가 아님을 받아들이지 못한 소녀는 여전히 물거품을 쫓고 있습니다.<br><br>초대장 한 장: 귀하의 친구를 찾고 있나요? 그녀에 대하여 알고 싶나요? 올레투스 장원으로 오세요! 올레투스 장원으로 귀하를 초대합니다.</td></tr></tbody></table></p>
+
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4"></a><a href="#목차"><b>3.4.</a> 인물 관계</b></h2></summary>
+
+<p class="text1">
+<div style="height:10px;"></div> <b>장원에 오기 전</b><div style="height:10px;"></div>
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/나이아스(제5인격)"><b>그레이스</b></a></p>그레이스가 살던 호수 마을에서 만나 친구가 되었습니다. 둘만의 비밀을 쌓아간지도 1년, 그레이스는 마을의 산 제물이 되어 바쳐졌습니다. 메이힐의 분노는 자연히 호수마을 사람들에게 향했고 동시에 친구를 지키지 못했다는 죄책감까지 더해져 도피, 해양학자가 되기로 결심했습니다. 바다에 가라앉은 그레이스를 찾기로 결심했지만 그 희망이 흐려질 때쯤, 그레이스의 행방을 알려주겠다는 편지가 도착합니다.
+<hr style="border: none; height: 1px; background: #dddddd; margin: 20px 0;">
+
+<b>장원에 온 후</b>
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/나이아스(제5인격)"><b>나이아스</b></a></p>메이힐은 장원에서의 게임 중 어느날 믿을 수 없는 모습을 목격하게 됩니다. 2미터 가까이 보이는 거대한 체구에 익사체의 모습을 하고 있었으나 그녀는 분명히 그레이스가 맞았습니다. 메이힐이 가장 처음 느낀 감정은 다름이 아닌 ‘희망’이었습니다. 메이힐은 즉시 게임조차 잊고 그레이스에게 다가갑니다…
+</p>
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차4"></a><a href="#목차"><b>4.</a> 이어보기</b></h2></summary>
+
+<p class="text1">▶ &nbsp;<span style="display: inline-block; white-space: nowrap;">
+            <a class="wikigreen" href="https://www.notion.so/MeG-172e496b9f5c8044a64ae6048c9ad0a5" target="_blank"> <td class="wt-detail"><img src="https://i.postimg.cc/hvbbBxN3/IMG-1082.jpg" style="height:1em; vertical-align:middle;">
+                <span class="wikigreentext">상세 페이지 이동</span>
+            </a>
+        </span>&nbsp;<br></p>
+</details>
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 제5인격 감시자 나이아스. 자세한 것은 인물 관계 참고.
+</p>
+
+</div>
