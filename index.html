@@ -1,0 +1,794 @@
+<!-- ▼▼▼ 기본 설정란 ▼▼▼ -->
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+
+
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+
+
+
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">공상가</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 空想家  ·  Daydreamer<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+       <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="https://i.postimg.cc/SsJbyZpf/muje991-20251101182818.png" width="100%" />
+    <p style="font-size:10px;">© 춘자 님</p><div style="height:5px;"></div></td></tr>
+
+
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>에스더</b><a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a><br> Esther</br></td></tr>
+<tr><td class="wt-color"><b>식별 번호</b></td><td class="wt-detail">?-?-?</td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">7월 30일</td></tr>
+<tr><td class="wt-color"><b>액티브 능력</b></td><td class="wt-detail">공상</td></tr>
+<tr><td class="wt-color"><b>패시브 능력</b></td><td class="wt-detail">무통증<br>유능</td></tr>
+<tr><td class="wt-color"><b>버프</b></td><td class="wt-detail"></td></tr>
+<tr><td class="wt-color"><b>디버프</b></td><td class="wt-detail">귀족 예절</td></tr>
+
+<tr><td class="wt-color"><b>유형</b></td><td class="wt-detail"><img src="https://i.postimg.cc/T18GBPGw/muje988-20251031191826.png" style="height:1.7em; vertical-align:middle;"> <img src="https://i.postimg.cc/QC1r9262/muje988-20251027220337.png" style="height:1.7em; vertical-align:middle;"></td></tr>
+
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><b> 공상</b></td></tr></td></tr>
+<tr><td class="wt-color"><b>업적</b></td><td class="wt-detail">백일몽<a class="text2" id="ref2" href="#각주2"><sup>[2]</sup></a></td></tr>
+      </tbody>
+    </table>
+
+    
+<div style="height:10px;"></div>
+
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 외적 특성<br />
+<a style="padding-left: 0px;" href="#목차3-">3.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-1">3.1.</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차3-2">3.2.</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-3">3.3.</a> 배경 추리<br />
+<a style="padding-left: 20px;" href="#목차3-4">3.4.</a> 캐릭터 데이 이벤트 편지<br />
+<a style="padding-left: 40px;" href="#목차3-4-1">3.4.1.</a> 2020년<br />
+<a style="padding-left: 40px;" href="#목차3-4-2">3.4.2.</a> 2021년<br />
+<a style="padding-left: 40px;" href="#목차3-4-3">3.4.3.</a> 2022년<br />
+<a style="padding-left: 40px;" href="#목차3-4-4">3.4.4.</a> 2023년<br />
+<a style="padding-left: 40px;" href="#목차3-4-5">3.4.5.</a> 2024년<br />
+<a style="padding-left: 40px;" href="#목차3-4-6">3.4.6.</a> 2025년<br />
+<a style="padding-left: 0px;" 
+href="#목차4">4.</a> 스토리 정리<br />
+<a style="padding-left: 0px;" 
+href="#목차5">5.</a> 현재 행적<br />
+<a style="padding-left: 0px;" href="#목차6">6.</a> 탐사원과의 관계<br />
+<a style="padding-left: 0px;" href="#목차7">7.</a> 기타<br />
+
+        </td></tr></tbody></table>
+
+
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차"><b>1.</a> 개요</b></h2></summary>
+
+<table class="wiki-img-sing"><tbody><tr><td style="border-color: #2d3444;"><iframe src="https://www.youtube.com/embed/KqFeYzA03s0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen="true"></iframe></td></tr><tr><td style="background-color: #2d3444; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: rgb(255, 255, 255);"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;"><b>공상가 EP 'Esther's Degeneration of Venus'</b></span></span></span><br></td></tr>
+
+     <tr><td style="background-color: #ffffff; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5 !important;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: #2d3444;"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;">
+              <details style="margin-top: 0px; margin-bottom: 0px !important;">
+        <summary style="cursor: pointer; font-weight: bold; padding: 0px; background-color: #ffffff; color: #2d3444; text-align: center;">
+<b>가사 보기 ▼ </b>
+        </summary>
+        <div style="padding: 10px; background-color: #ffffff; color: #2d3444; line-height: 1.5;">
+         준비중
+        </details>
+</span></span></span></td></tr>
+</tbody>
+</table>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">귀족 사회에서 낡고 닳아간 공상가는 현실 도피의 본능만 커져갔습니다. 그런 현실에서 자신의 유일한 구원자까지 잃은 공상가는 귀족 사회에서 도망칩니다.</span><br></td></tr></tbody></table>
+
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);">
+<div style="height:10px;"></div>
+시즌 12 정수 1.5에 새롭게 출시된 제5인격의 생존자. 공상 능력을 이용한 어그로에 특화된 견제·보조형 캐릭터이다. </span><br></p>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차"><b>2.</a> 외적 특성</b></h2></summary>
+
+
+<style>
+  table.m-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3C2E21; 
+  }
+  table.m-table th, 
+  table.m-table td {
+    border: 1.5px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.m-table tr td:first-child {
+    background-color: #f5f5f5; /* 배경색 */
+    color: #000000;  
+    width: 100px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.m-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+    text-align: left;
+  }
+</style>
+
+<table class="m-table">
+  <tr>
+    <td> <b>공상</b> </td>
+
+    <td><b>보유 횟수(초기/최대): 1/3, 0/3</b><a class="text3" id="ref3" href="#각주3"><sup>[3]</sup></a><br><b>재보유 시간: 50초</b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>공상가의 잠재적인 무의식은 현실을 파악합니다. 주위에 감시자가 있을 시 능력이 활성화 되어 사용 가능합니다.<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>현실에서 도망치고 싶어 하는 공상가의 눈에 비추는 것은 모두 한낱 공상입니다. 능력 사용 시 공상가에게 <b><span style="color:#588FBF;">12.5초</span></b> 동안 공상 시점 발현. 공상 세계에 안주한 공상가는 해독 속도, 이동 속도, 판자 및 창틀 관련 모션 속도 <b><span style="color:#588FBF;">5.5%</span></b> 증가합니다. (<b><span style="color:#588FBF;">1개</span></b> 감소)<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span><b><span style="color:#B19F48;">사념체</span></b><br>공상 발현 시 공상 아이콘에서 사념체 아이콘으로 변환. 공상을 떠도는 사념체를 이용할 수 있습니다. 특정 구역 지정 시 공상을 통해 사념체를 지정 구역으로 보내어 시점 전환합니다. 사념체를 이용하는 동안 공상가는 아무것도 할 수 없으며 미약한 정신으로 만들어 낸 무의식의 사념체임으로 쉽게 다루지 못하기 때문에 피해 입을 시 소멸합니다. (<b><span style="color:#588FBF;">2.5개</span></b> 감소)<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>능력 사용 후 현실로 돌아온 공상가는 현실에 적응하기 위해 <b><span style="color:#588FBF;">5.5초</span></b> 동안 해독 속도, 이동 속도, 판자 및 창틀 관련 모션 속도가 <b><span style="color:#588FBF;">10%</span></b> 감소합니다.</td></td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>무통증</b> </td>
+
+    <td>통증을 느낄 수 없습니다. 감시자에게 피해를 입을 경우 랜덤한 확률로 <b><span style="color:#588FBF;">0.5</span></b> 피해를 입습니다.</td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>유능</b> </td>
+
+    <td>공상가는 장원에 오기 이전에 응급 처치를 배웠습니다. 자가 치료 <b><span style="color:#588FBF;">1회</span></b> 사용 가능합니다. (<b><span style="color:#588FBF;">0.5</span></b> 부상 치료 불가능)</td>
+  </tr>
+</table>
+
+<div style="height:10px;"></div>
+
+<table class="m-table">
+  <tr>
+    <td> <b>귀족 예절</b> </td>
+
+    <td>귀족 사회에서 교양을 중요시 여겼기 때문에 행동가짐이 조심스럽습니다. 판자 및 창틀 관련 모션 속도 <b><span style="color:#588FBF;">10%</span></b> 감소합니다.</td>
+  </tr>
+</table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-"></a><a href="#목차"><b>3.</a> 스토리</b></h2></summary>
+
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-1"></a><a href="#목차"><b>3.1.</a> 캐릭터 설정</b></h2></summary>
+
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>비너스 에리카</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>공상가</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>24</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>159cm</td>
+  </tr>
+  <tr>
+    <td> <b>몸무게</b> </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td> <b>국적</b> </td>
+    <td><p class="text1"><a href="https://namu.wiki/w/%EC%98%81%EA%B5%AD" target="_blank"> <img src="https://i.postimg.cc/NFX5GGWx/IMG-1099.png" style="height:1.1em; vertical-align:middle;"> 영국</a><a class="text6" id="ref6" href="#각주6"><sup>[6]</sup></a> </p> </td>
+  </tr>
+  <tr>
+    <td><b>출신 계급</b></td>
+    <td>대귀족</td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td>  </td>
+  </tr>
+  <tr>
+    <td><b>장기</b></td>
+    <td>분석</td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td>감정 결여, 완벽, 자포자기, 불신</td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td>에스더</td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td>귀족</td>
+  </tr>
+
+</table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-2"></a><a href="#목차"><b>3.2.</a> 배경 스토리</b></h2></summary>
+
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+    padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>귀족 사회에서 낡고 닳아간 공상가는 현실 도피의 본능만 커져갔습니다. 그런 현실에서 자신의 유일한 구원자까지 잃은 공상가는 귀족 사회에서 도망칩니다.</td>
+ </tr>
+
+</table>
+
+<div style="height:10px;"></div>
+
+모종의 사건 이후 귀족에 대한 환멸을 느낀 공상가는 낡고 닳아가며 절망하는 날이 늘어났다. 공상가의 가문인 에리카 가는 예로부터 귀족 사회의 우위를 점령하고 있었기 때문에 공상가에게는 세태를 변화시킬 기회가 있었으나 행동에는 항상 책임이 따랐다.
+
+<div style="height:10px;"></div>
+
+신념이 강박으로 변하면서 정신 상태가 악화되고 에스더를 만나게 된다. 친구가 된 에스더는 공상가와 단 둘이 있을 때만 나타났고 누군가 오면 모습을 숨겼다. 시간이 흐를수록 공상가의 무의식은 에스더의 존재에 대해 의문을 제시했다. 끝내 공상가는 에스더가 실존하지 않는 상상에 불과했음을에 깨닫고 이내 잊혀졌던 모든 진실을 깨달은 공상가는 현실에 절망하여 몇 년 동안 의식을 잃는다. 
+
+<div style="height:10px;"></div>
+
+지긋지긋한 이 위치에서 벗어나고 싶었던 공상가는 의식을 차리자마자 그곳에서 도망친다. 
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-3"></a><a href="#목차"><b>3.3.</a> 배경 추리</b></h2></summary>
+
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>1. 망가진 소망</b></p>염원이 집착이 되지 않도록 우리는 항상 예의 주시하여야 합니다.<br><br>“내가 꼭 구하러 갈게! 내가 꼭 구하러 갈 테니까 제발 죽지 마...”</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>2. 행방불명</b></p>자유에서 방향을 잘못 틀면 그것은 방황이 됩니다.<br><br>자신이 어디에서부터 비롯되었는지 잊으면 안 된다. 그것은 자신을 잃을 수 있는 수많은 길의 지름길이다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>3. 뛰어난 귀족</b></p>쌓아 올린 소문이 무덤이 되지 않도록 흐름을 잘 이용해야 합니다.<br><br>“에리카 가의 비너스 아가씨가 5살 위의 영식을 이겼다지? 에리카 아가씨라면 그 정도는 쉬울 거야.”</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>4. 레테의 축복</b></p>살아있다는 것만으로 길에는 변수가 생깁니다. 보이지 않는 먼 길을 볼 수 없어도 당장 자신이 가려는 길에 무엇이 있는지 정도는 직면해야 합니다.<br><br>족히 며칠을 방치해 시든 하얀 장미, 빛이 내리는 서늘한 허공. 오늘의 손님을 배웅한 비너스의 손 끝에는 아무것도 닿지 않습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>5. 무아지경</b></p>염원은 신이 이루어주지 않기에 스스로 이루어야 합니다.<br><br>일기 1: 누군가 나에게 맞장구치는 소리가 들렸다. 목소리를 의식하니 더 이상 들리지 않는다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>6. 구원자</b></p>소중한 무언가가 생긴다는 건 동시에 잃을 게 생긴다는 겁니다.<br><br>“에스더. 내 이름이야.”</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>7. 행복</b></p>사람은 자신의 행복을 자신할 수 있을 때 비로소 완성됩니다.<br><br>그림: 똑 닮은 소녀 둘이 그려져 있다. 그림뿐인데도 즐거움이 묻어 나온다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>8. 낙원</b></p>현실에 존재하지 않기에 바랄 수 없는 염원이 존재합니다.<br><br>그렇기에 우리는 바라고 바라야 한다. 현실에 존재하지 않는다고 해도 끝까지 남아있는 무언가가 사라지지 않도록.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>9. 현실</b></p>이 세상에 존재하는 이상 우리는 앞으로 나아가는 방법을 알아야 합니다.<br><br>일기 2: 에스더의 모습이 잘 보이지 않는다. 이유를 물어보아도 에스더는 아무런 대답 없이 웃기만 할 뿐이다. 에스더를 그림에 담으려고 해도 모습이 잘 기억나지 않는다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>10. 자각</b></p>누군가에게는 진실이 독이 됩니다.<br><br>참혹의 현장이었다. 순식간에 이성은 무너지고 온몸은 상처 투성이다. 중년 부부와 사용인들은 흥분한 비너스를 저지하고 있고 비너스는 무척 혼란스러워 보인다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>11. 상실감</b></p>모든 일에는 준비와 순서가 필요합니다.<br><br>“에리카 가의 아가씨, 미쳐서 쓰러졌다는 소문 들었어? 그 아가씨가 쓰러지기 직전에 저택에는 짐승의 울음소리가 들렸대.”</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>12. 결심</b></p>나아가는 방법을 알아야 하고 부정할 수 없다는 게 곧 진실이며 현실이라는 건 알지만 어떤 현실은 당연한 것들을 감당할 수 없을 정도로 무겁습니다.<br><br>사진: 구름 한 점 없는 맑은 하늘, 몇 년 만에 의식을 차린 비너스는 모든 것을 체념한 얼굴로 하늘을 바라보았다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>13. 도망</b></p>도망은 포기이기도 하지만 하나의 특권이기도 합니다.<br><br>사진: 텅 비어버린 침대, 어디에도 보이지 않는 비너스. 중년 부부는 상심을 가지며 흐느끼고 있다.</td></tr></tbody></table></p>
+
+</details>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4"></a><a href="#목차"><b>3.4.</a> 캐릭터 데이 이벤트 편지</b></h2></summary>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-1"></a><a href="#목차"><b>3.4.1.</a> 2020년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">커다랗게 실린 신문 한 면</span> <hr />에리카 가의 아가씨가 실종됐다!
+<div style="height:10px;"></div>
+실종된 당일, 아침까지 비너스 에리카 씨가 기상한 걸 확인하고 준비하고 나간다는 대답을 사용인이 들었다 한다. 방문 앞에서 기다리고 있는데 계속 나오지 않아 상태를 확인하려 들어가 보니 침대는 텅 비어있고 몇 가지의 짐이 사라졌으며 테라스는 활짝 열려 있었다고 한다.
+<div style="height:10px;"></div>
+명문가의 외동딸이 실종되어 신문에 커다랗게 실렸다. 신문에는 자신의 딸이 사라진 당일의 정황이 쓰여 있고 찾아준 이에게 그만한 대가를 지불하겠다고 쓰여있다. 외에도 에리카 가에 관한 내용이 간단하게 쓰여있지만 돈에 굶주린 이들은 대가에 관심 있을 뿐이고 에리카 가를 성가시게 여겼던 이들은 신문을 향해 비웃을 뿐이었다.</td></tr></tbody></table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-2"></a><a href="#목차"><b>3.4.2.</a> 2021년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">오래된 가문의 기록</span> <hr />
+에리카 가
+<div style="height:10px;"></div>
+날짜: 불명
+<div style="height:10px;"></div>
+언제 탄생했다는 기록이 없으며 어느 순간부터 귀족 사회에 끼어들었다. 에리카 가의 핏줄, 영혼들은 모두 금발에 백안을 물려받고 탄생의 순간부터 현재까지 절대적으로 완벽하면서 명성을 널리 알리며 그들의 영혼은 덧없이 순수했고, 새하얗게 빛을 냈다. 그들은 모든 것을 갖춘다.
+<div style="height:10px;"></div>
+그들은 선해야 한다. 누구에게도 휘둘려서 안 되고 공평을 중시해야 한다. 아무도 희생시켜서는 안 되고 진흙탕 사이에서도 꼿꼿하게 서 있어야 한다.</td></tr></tbody></table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-3"></a><a href="#목차"><b>3.4.3.</a> 2022년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">닿지 못한 데니스 화이트의 일기 한 페이지</span> <hr />
+세상에 완벽이란 건 존재하지 않아. 완벽은 이면이 존재한다는 거야. 하지만 그들은 그런 거에 관심이 없지. 오래전부터 뭐라도 해내고 싶어 하고 기대에 부응하고 싶어 했던 비너스였으니까 길을 잃지 않을까 걱정돼.
+<div style="height:10px;"></div>
+내일 비너스와 가문의 누명을 벗길 계획을 실행하기로 했어.
+<div style="height:10px;"></div>
+비너스, 알고 있니? 우리의 행적은 우리가 만날 때부터 그 귀족들이 몰래 사람을 보내 보고 있었다는 거 말이야. 똑똑한 너라면 알고 있었겠지만 비너스, 이미 몰락한 가문은 되살리기란 어려워. 그래서 오늘 밤에 나누었던 이야기를 그 귀족 가문에 전하고, 너는 상관없다 하기로 했어. 그들은 너를 이용하겠지만 너의 부모님이라면 비너스를 보호해 주고 그런 거에 속아 넘어가지 않겠지.
+<div style="height:10px;"></div>
+넌 나의 가족처럼 유일한 사람이었어.</td></tr></tbody></table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-4"></a><a href="#목차"><b>3.4.4.</a> 2023년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">비너스의 비밀스러운 일기 한 페이지</span> <hr />
+나는 가족도, 타인도 아무도 모르게 비밀리에 운영하는 ‘병원’에 들렀다. 그곳의 ‘의사’는 몸에 문제가 있을 경우 대가만 제대로 지불한다면 묻지도 따지지도 않고 치료해준다고 한다. 최근 몸에 이상이 있다는 걸 알아차렸다. 어디 아픈 곳은 없었고 일상에 지장이 있었던 적도 없었지만 조심해서 나쁠 건 없다. 모두가 잠든 한밤 중에 그 ‘의사’를 찾아가 최근에 일어난 일들을 말했다. 종종 의식이 끊기고, 아침에 눈을 한 번 깜빡이면 이미 점심을 넘어가고 있거나 일을 하고 있다. 단순히 정신을 잃는 건 아닌 것 같았다. 나의 의식이 끊긴 사이, 꾸준히 무의식 속에서 일상을 보내고 있었던 듯하다. 정신을 차린 바로 기억나지 않지만 몇 초 후에 바로 기억을 떠올렸기 때문에 간신히 일상을 이어올 수 있었다. 그 ‘의사’는 가만히 듣다가 여러 검사를 진행하였다. 하지만 아무것도 알아낼 수 없었고 오히려 몸에는 아무런 이상이 없다고 한다. ‘의사’가 말하길 심리적인 요인에서 오는 병세일 수도 있다는 말만 들을 수 있었다.
+<div style="height:10px;"></div>
+이후로 나는 일상에서 정신을 차리려고 해 봤지만 조금이라도 멍한 순간이 있으면 그 병세가 찾아왔다. 몸에 아무런 이상이 없다면 그 ‘의사’가 말한 것처럼 심리적인 요인에서 오는 게 분명했다. 아무리 떠올리려고 해도 아무것도 떠오르지 않았다.
+</td></tr></tbody></table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-5"></a><a href="#목차"><b>3.4.5.</a> 2024년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">에스더</span> <hr />
+1. 새하얀 빛에서 투영된 그림자는 그녀의 발버둥입니다.
+<div style="height:10px;"></div>
+2. 그녀의 눈은 밝고 푸른 하늘을 담았지만 정작 그녀는 하늘에 닿지 못했습니다.
+<div style="height:10px;"></div>
+3. 환하게 들어오는 빛은 그녀의 얼굴을 가려 진짜 표정을 알아보기 어렵습니다.
+<div style="height:10px;"></div>
+4. 그녀의 품에 안고 있는 작은 초상화는 이제 꿀 수 없는 허상입니다.
+<div style="height:10px;"></div>
+5. 귀족 사회에서 도망친 그녀의 옷차림은 이제 아무래도 좋은 듯합니다.
+</td></tr></tbody></table>
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">메시지 한 통</span> <hr />
+에스더의 빛은 너무 밝고 화사해서 그 빛으로 자신의 앞길조차 태워버렸습니다. 주위의 풍경은 빠르게 변해가고 빠르게 변하는 풍경을 감당해야만 했습니다. 누가 알았을까요? 주위의 풍경이 빠르게 변해가는 게 아닌 스스로 멈출 방법을 몰라 너무 빨리 달린 탓에 변하는 풍경이었습니다.
+</td></tr></tbody></table>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h3"><span class="wiki-h3-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4-6"></a><a href="#목차"><b>3.4.6.</a> 2025년</b></h2></summary>
+
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="font-size:20px;">에스더의 조사 기록(1)</span> <hr />
+광란의 게임에 참여한 같은 귀족을 살해하고 실종된 에스더의 단서를 따라가자 뜻 밖에도 귀족 중에서도 항상 화제가 되는 에리카 자택으로 날 이끌었다. 실종된 여동생에 대해 이야기하고 싶다고 하니 날 맞이해 준 사람 젊은 나이에 가주가 된 노아 에리카라는 남자였다.
+<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>
+“몇 년 전에는 시도 때도 없이 많은 기자들이 찾아왔는데 이제 비너스의 소식을 궁금해하는 사람들이 우리 가족 말고 아무도 없어요.”
+<div style="height:10px;"></div>
+“실종된 여동생 분의 이름이 비너스인가요?”
+<div style="height:10px;"></div>
+그녀와 남매로 보이는 노아 씨가 말하는 이름은 내가 알고 있던 이름과 달랐다.
+<div style="height:10px;"></div>
+“비너스와 함께 놀던 친구의 이름이 에스더였습니다. 기자님이 에스더의 이름을 알고 있어 만나보고 싶었습니다. 비너스는... 아무도 없을 때면 꼭 유령이 있는 것처럼 누군가와 대화했어요. 하지만 알 수 있었습니다. 그건 유령이 아니라 비너스가 만들어 낸 상상 속 존재라는 걸요. 8살에 비너스는 눈앞에서 소중한 친구를 잃었습니다. 그때부터 비너스의 행동이 이상해지기 시작했어요. 누군가 있을 때면 괜찮았지만... 혼자 있을 때는 에스더의 이름을 가진 상상 속 친구와 있었어요. 몇 년 뒤에는 그 친구를 기억하지 못했습니다. 괴로운 기억은 차라리 잊는 편이 낫다고 생각해 다행이라고 생각했어요. 하지만 비너스의 행동은 나아지지 않았습니다.”
+<div style="height:10px;"></div>
+“어째서 가족들은 묵인했나요?”
+<div style="height:10px;"></div>
+“... 처음에는 비너스와 대화를 시도해 봤습니다. 하지만 비너스는 그 행동을 기억하지 못하는 것 같았어요. 어쩌면 이건 핑계일지도 모릅니다. 현실에서 깨어난 비너스가 무너질까 봐 무서웠어요. 가족 모두 그 사실을 알았을지도 몰라요.”
+<span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>
+에스더는 친구를 잃은 사건으로 귀족 사회에 반감을 가지고 있는 것처럼 보였다. 그럼 어째서 비너스와 자신의 가문을 버리고 에스더의 탈을 쓴 걸까? 그 사실은 현재 실종된 그녀만 알고 있을 것이다.
+</td></tr></tbody></table>
+</details>
+
+</details>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차4"></a><a href="#목차"><b>4.</a> 스토리 정리</b></h2></summary>
+
+
+<table class="text1" style="border-collapse: collapse; width: 100%; border: 1px solid #dddddd;" data-ke-align="alignLeft"><tbody><tr><td style="width: 100%; border: 1px solid gray; border-top: 5px solid orange; padding: 12px;"><span style="font-size: 1.3em;">이 문서에</span> <a style="color: #0275d8; font-size: 1.3em;" href="https://namu.wiki/w/%EC%8A%A4%ED%8F%AC%EC%9D%BC%EB%9F%AC" target="_blank" rel="noopener">스포일러</a><span style="font-size: 1.3em;">가 포함되어 있습니다.</span><br /><br />이 문서가 설명하는 작품이나 인물 등에 대한 줄거리, 결말, 반전 요소 등을 직·간접적으로 포함하고 있습니다.</td></tr></tbody></table>
+<div style="height:10px;"></div>
+그 가문. 기이할 정도로 모든 것이 완벽하고 출중한, 이상적이고 이성적인 가문. 에리카 가문의 핏줄이라면 예외없이 황홀한 금발과 쉽게 물들 수 있을 것 같은 화사한 백색의 눈동자를 가지고 태어난다. 에리카를 부르는 이름은 다양했다. 도움을 받은 이들은 신의 가문이라 불렀고 시기하는 이들은 악마와 영혼을 맞바꾼 가문이라고 통칭했다.
+<div style="height:10px;"></div>
+어린 비너스는 한 의문점을 가지고 있었다. 자신을 대하는 사람들의 인식. 처음은 호의로 생각했지만 점점 마냥 호의처럼 느껴지지 않아 단순히 착각이었거나 자신이 의심이 많은 줄 알았다. 그것의 깊은 속내는 에리카들에게 잘 보이려는 아부였다. 의문이 풀리는데엔 그렇게 긴 시간이 걸리지 않았고 그 과정에서 몰락 직전에 몰린 가문의 영식, 데니스 화이트를 만난다.
+<div style="height:10px;"></div>
+아주 높은 지위와 명예, 비너스는 모든 것을 가지고 태어났다. 모두가 에리카에 아첨하기 바빴으며 에리카를 헐뜯던 자들은 역으로 본인에게 화살이 돌아왔다. 그 나이에 쉽게 배울 수 없었던 걸 금방 익힌 비너스였고 재능과 노력을 함께 가진 사람을 아무도 따라갈 수 없었다. 이제 세상을 조금 알게 된 비너스는 제 위치를 ‘좀 피곤하지만 어쩔 수 없다’고 생각했다. <b>처음 느낀 부담은 자신이 타인의 시선을 신경써야 한다는 것이었다.</b>
+<div style="height:10px;"></div>
+
+ <img src="https://i.postimg.cc/qMtqmLhK/1761987131382.png" width="100%" />
+<p style="text-align:center; font-size:10px;">© PP 님</p><div style="height:5px;"></div>
+모종의 사건으로 귀족 사회의 바닥을 엎어버리겠다는 신념을 가지게 된 비너스.
+<div style="height:10px;"></div>
+사건은 비너스의 하나뿐인 친구, 데니스 화이트에게서 시작한다. 같은 귀족이었음에도 전혀 다른 위치에 있었던 비너스와 데니스. 화이트 가는 귀족 중에서도 가장 낮은 위치에 속해 형편없는 평판을 받고 있었다. 이전 친하게 지냈던 가문과 생긴 문제에서 그 가문의 영식이 저지른 잘못을 더 직위가 낮은 화이트 가에 뒤집어 씌웠고, 상대적으로 지분이 낮았던 화이트 가의 명성은 순식간에 몰락했다.
+<div style="height:10px;"></div>
+데니스는 기울어가는 가문을 일으키고자 비너스와의 만남을 가진다. 비너스와 데니스는 동류의 사람이었고, 마음까지 잘 맞아 둘도 없는 친우로 발전했다. 그리고 데니스의 사정을 알게 된 비너스는 자신의 배경이 이것을 바꿀 힘이 있다고 믿었기에 그를 도와주고자 했지만 오히려 그녀의 선택이 데니스와 그의 식솔들을 죽음으로 내몰고 만다.
+<div style="height:10px;"></div>
+데니스의 부모님이 끌려간 상황, 사람들로부터 쫓기던 비너스와 데니스는 결국 붙잡힌다. 그녀가 실수했던 것은 단 한 가지, 그를 믿었다는 것. 데니스는 이미 화이트의 멸문을 예상하고 화이트를 견제하던 가문에 스스로 고발했다. 그리고 죽기 직전 그 사실을 비너스의 부모님에게 알렸다. 따라서 비너스의 부모님이 손 쓸 새도 없이 데니스는 죽어버린 후였다. 오직 비너스만이 죽음 직전까지 갔다가 살아남을 수 있었다.
+<div style="height:10px;"></div>
+구할 수 없었다. 사건 이후로 비너스는 이 사회의 바닥을 뒤집고 다시는, 누구에게도 부당한 죽음이 생기지 않게 만들겠다는 신념을 가진다. 그녀는 보았다. 권력과 재력에 휩쓸려 무너지는 사랑하는 친구를. 얕보면 먹힌다는 교훈으로 이곳에서 살아남기 위해 비너스는 완벽으로 존재하기로 한다. 비너스가 자랄수록 그녀를 주시하는 눈은 많아지고 그녀의 신념은 강박으로 변한다.
+<div style="height:10px;"></div>
+불합리한 희생을 만들지 않기로 결심한 뒤 비너스는 단 한 번도 자신을 위하지 않았다. 모두에게 완벽해야 얕잡아 보이지 않기에 결함없는 완벽을 보여주었고 끊임없이 데니스를 되뇌며 매달 화이트 가 사람들에게 속죄했다. 하지만 사건 이후 차츰 갉아먹히던 정신은 화이트 가 사건에 대한 기억을 점점 삭제했다. 그에 대한 기억이 지워졌음에도 신념을 유지하고 완벽을 연기하던 비너스는 어느 날 자신을 이루고 있던 모든 것에 대한 환멸과 동시에 이토록 아등바등 살아야 하는 이유에 혼란을 느낀다. 비너스에겐 이제 강박으로 변해버린 신념과 맥락 없는 절망만이 남았다. 이미 멈추기엔 늦었으며 멈추는 방법조차도 몰랐다. 혼란 상태의 비너스는 무의식적으로 현실도피를 선택했다.
+<div style="height:10px;"></div>
+<img src="https://i.postimg.cc/xTWCBzMM/1761987131461.png" width="100%" />
+<p style="text-align:center; font-size:10px;">© PP 님</p><div style="height:5px;"></div>
+현실로부터 도망친 비너스에게 친구가 생기고 이 존재에게 기대게 되지만 ‘존재’는 강박이 된 신념과 맥락 없는 절망에서 태어난 공상으로 만들어 낸 존재, 에스더였다. 비너스도 알지 못하는 아주 깊은 심해에서 에스더가 자신이 만들어 낸 존재라는 걸 알고 있었으나 외면한다. (현실의 비너스가 어떻게 되는가 하면 비너스가 처한 현실은 여전히 똑같다. 멈추는 방법도 모르고 무의식으로 선택한 도피처였기 때문에 정신만 현실에서 도망친 상태) 절망 속에서 비너스는 에스더가 있음으로 겨우 이성을 유지했다. 그러나 상상만 한다는 건 현실로 이루지 못하기 때문에 이 상상에도 한계가 생긴다. 몇 년 동안 함께 있어 준 에스더의 모습이 차츰 보이지 않는다는 걸 알아챈 비너스는 에스더에게 이유를 물어보지만 에스더는 대답 없이 웃기만 할 뿐이었다.
+<div style="height:10px;"></div>
+비너스에게 어느 날 갑자기 에스더가 나타난 것처럼 어느 날 갑자기 공상에서 깨어난다. (현실로부터 도망칠 때는 멈추는 방법을 몰라 무의식으로 공상 친구를 만들어 공상에 기대는 선택이었다면 현실로 깨어날 때는 실컷 도망쳤으니 이제 그만 현실(비너스)로 돌아가라는 에스더(공상)의 선택이었다. 그만 도망치고 괜찮아지고 싶다는 무의식이 생겨난 것) 갑작스러운 의식으로 현실을 똑바로 마주하게 된 비너스는 화이트 일가와 자신이 만들어 낸 존재뿐이었던 에스더에 대한 모든 기억과 감정이 겹쳐 순식간에 이성이 무너지고 무너진 이성을 감당하지 못한 비너스는 몇 년간 의식을 잃게 된다. 의식을 차린 비너스는 더 이상 귀족 사회에 머물고자 하는 의지가 남아있지 않았고 때마침 귀족 사회에서 도망친다.
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차5"></a><a href="#목차"><b>5.</a> 현재 행적</b></h2></summary>
+
+<!-- ▼▼▼ (5) 내용 ▼▼▼ -->
+
+올레투스 장원으로 향하면서 귀족이었던 비너스 에리카를 잠재우고 자신의 유일한 구원자가 되어 주었던 에스더로서 존재한다. 새 출발로 보일 수 있지만 귀족 사회에서 도망치며 현실을 뜻하는 비너스를 버림으로써 공상을 뜻하는 에스더가 된다는 건 완전한 현실 도피임을 보여준다.<a class="text4" id="ref4" href="#각주4"><sup>[4]</sup></a>
+<div style="height:10px;"></div>
+올레투스 장원에서도 무의식이라는 초점에서 벗어나지 못한 듯하다. 에스더의 얼굴에는 웃음이 떠나지 않았고 누구에게나 상냥하면서 다정하고 필요에 따라 조금 엄격한 면도 보였으며 조언도 잘해주었고 침착하고 도움 또한 잘 주지만 적당히 실수도 해주는... 여전히 모든 것이 완벽해 보이지만 지나치게 사람의 예상 범위 안에서 행동했다.<a class="text5" id="ref5" href="#각주5"><sup>[5]</sup></a> 이 모든 것은 에스더의 무의식에서 우러나왔다. 이것을 자각하지 못하기에 자신이 말했던 것, 행동했던 것 모두 기억하지 못한다. 기억을 떠올리는 것도 무의식의 담당. 에스더의 본래 상태는 자기 의지가 상실되었고 누가 어떻게 되어도 상관하지 않으며 감정이 결여된 상태이다. 누구나 불쾌하거나 슬픈 상황에서도 ‘조금 귀찮다’ 혹은 ‘조금 거슬린다’로 인식한다.<a class="text6" id="ref6" href="#각주6"><sup>[6]</sup></a> 가끔 인형, 식물, 곤충과 혼자 대화한다.
+<div style="height:10px;"></div>
+이 모든 것이 한 사람에게는 자신으로서 존재한다.<a class="text7" id="ref7" href="#각주7"><sup>[7]</sup></a> 노튼이 곁에 있으면 자기 의지와 감정이 풍부해진다. 자세한 관계는 아래 참고.
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차6"></a><a href="#목차"><b>6.</a> 탐사원과의 관계</b></h2></summary>
+
+
+<p class="text1">▶ &nbsp;<span style="display: inline-block; white-space: nowrap;">
+            <a class="wikigreen" href="https://i-cant-stop-loving-you.tistory.com/18" target="_blank"> <td class="wt-detail"><img src="https://i.postimg.cc/hvbbBxN3/IMG-1082.jpg" style="height:1em; vertical-align:middle;">
+                <span class="wikigreentext">기본 서사로 이동</span>
+            </a>
+        </span>&nbsp;<br></p>
+</details>
+
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차7"></a><a href="#목차"><b>7.</a> 기타</b></h2></summary>
+
+
+•&nbsp;생일은 <b>7월 30일</b>, 별자리는 <b>사자자리</b>다. 좋아하는 것은 <b>공상의 존재</b>. 싫어하는 것은 <b>귀족, 현실</b>이다.
+<div style="height:10px;"></div>
+•&nbsp;데니스 화이트가 죽은 원인을 계속 자신의 탓으로 돌리고 있는 점이 의아하다. 무의식이 여러 번 강조되었는데 그 무의식에서 제 잘못이 아니라는 걸 이미 인지하고 있었을 가능성도 있다. 하지만 본인의 계급 탓에 다른 곳에 해소하지 못하고 자학의 방식으로 표출된 것으로 추정된다.
+ <div style="height:10px;"></div>
+•&nbsp;귀족 여성이기에 연약할 것이라는 인식이 있지만 보통 사람들에 비해 힘이 센 편이다. 또한 순발력도 좋은 편이다.
+</details>
+
+<!-- ▼▼▼ 각주 구분선 ▼▼▼ -->
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<!-- ▼▼▼ 각주란 ▼▼▼ -->
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 본명은 비너스 에리카 (Venus Erica)
+</p>
+<p id="각주2">
+  <a href="#ref2">[2]</a> 공상 시점에서 일정 점수 이상 시 달성
+</p>
+<p id="각주3">
+  <a href="#ref3">[3]</a> 게임 시작 후 감시자가 근처에서 시작됐을 경우 1개를 가지고 시작), 감시자가 근처에 없을 경우 0개를 가지고 시작
+</p>
+<p id="각주4">
+  <a href="#ref4">[4]</a> 비너스(Venus)는 ‘금성’을 뜻하고 에스더(Esther)는 ‘별’을 뜻하는데 비너스와 에스더를 보면 누구에게나 빛나는 금성에서 스스로를 계속 불태우다 보니 언제 사라질지 모르는 하나의 별로 퇴화됐다는 걸 알 수 있다.
+</p>
+<p id="각주5">
+  <a href="#ref5">[5]</a> 멈추는 방법을 몰랐다는 부분이 여러 번 언급되고 귀족 사회에서는 예상 밖의 범위로 행동해야 했으므로 지쳤다는 걸 암시
+</p>
+<p id="각주6">
+  <a href="#ref6">[6]</a> 이성이 무너지고 현실을 자각한 충격으로 인한 자기 의지 상실, 감정 결여
+</p> 
+<p id="각주7">
+  <a href="#ref7">[7]</a> 탐사원, 노튼 캠벨 
+</p> 
+
+</div>
