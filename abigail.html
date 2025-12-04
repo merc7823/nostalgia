@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제5인격 동화 작가</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff; /* 전체 흰 배경 */
+      color: #222;
+      font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR";
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<!-- ▼▼▼ 기본 설정란 ▼▼▼ -->
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">동화 작가</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 童话作家  ·  Fairytale Author   ·  児童作家<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="00이미지링크00" width="100%" />
+            </div>
+          </td>
+        </tr>
+        
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>아비게일 서머셋</b><br> Abigail Summerset</br> 阿比盖尔 · 萨默塞特</br> アビゲイル  · サマーセット</br></td></tr>
+<tr><td class="wt-color"><b>식별 번호</b></td><td class="wt-detail">3-?-5</td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>액티브 능력</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>패시브 능력</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>버프</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>디버프</b></td><td class="wt-detail">???</td></tr>
+<tr><td class="wt-color"><b>유형</b></td><td class="wt-detail"><img src="https://i.postimg.cc/QC1r9262/muje988-20251027220337.png" style="height:1.7em; vertical-align:middle;"></td></tr>
+<tr><td class="wt-color"><b>난이도</b></td><td class="wt-detail"><img src="https://i.postimg.cc/XYZpHJz4/muje984-20251027220027.png" style="height:1.5em; vertical-align:middle;"></td></tr>
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><img src="아이템이미지" style="height:1.6em; vertical-align:middle;"><b> ???</b></td></tr></td></tr>
+<tr><td class="wt-color"><b>업적</b></td><td class="wt-detail">???<a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a></td></tr>
+      </tbody>
+    </table>
+
+<div style="height:10px;"></div>
+
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 외적 특성<br />
+<a style="padding-left: 0px;" href="#목차3-">3.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-1">3.1</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차3-2">3.2</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차3-3">3.3</a> 배경 추리<br />
+<a style="padding-left: 20px;" href="#목차3-4">3.4.</a> 인물 관계<br />
+<a style="padding-left: 0px;" href="#목차4">4.</a> 이어보기<br />
+        </td></tr></tbody></table>
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차"><b>1.</a> 개요</b></h2></summary>
+<table class="wiki-img-sing"><tbody><tr><td style="border-color: #2d3444;"><iframe src="https://youtu.be/_R2nZa8grno?si=zXR5mcMhG4sMh4vk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen="true"></iframe></td></tr>
+<tr><td style="background-color: #2d3444; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: rgb(255, 255, 255);"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;"><b>동화 작가 EP 'Abigail's Song'</b></span></span></span><br></td></tr>
+     <tr><td style="background-color: #ffffff; color: #ffffff; border-color: #2d3444; padding: 5px 10px; text-align: center; word-wrap: break-word; white-space: normal; vertical-align: top; line-height: 1.5 !important;"><span data-v-406a0d60="" style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px;"><span data-dark-style="color:#ddd;" data-v-406a0d60="" class="_862d9e2ccbd27b7b1219efe97e549328" style="color: #2d3444;"><span class="gnTtKeNw" data-v-406a0d60="" style="font-size: 0.925889em;">
+              <details style="margin-top: 0px; margin-bottom: 0px !important;">
+        <summary style="cursor: pointer; font-weight: bold; padding: 0px; background-color: #ffffff; color: #2d3444; text-align: center;">
+<b>가사 보기 ▼ </b>
+        </summary>
+        <div style="padding: 10px; background-color: #ffffff; color: #2d3444; line-height: 1.5;">
+         준비중
+        </details>
+</span></span></span></td></tr>
+</tbody>
+</table>
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">아비게일의 사명은 순수한 영혼들을 위하여 하나의 세계를 짓는 일입니다. 베를 짜듯이 꿈의 조각을 엮다 보면, 그들을 위한 아주 멋진 세계가 완성되기 마련입니다.</span><br></td></tr></tbody></table>
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);">제5인격의 생존자. </span><br></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차"><b>2.</a> 외적 특성</b></h2></summary>
+
+<style>
+  table.m-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3C2E21; 
+  }
+  table.m-table th, 
+  table.m-table td {
+    border: 1.5px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.m-table tr td:first-child {
+    background-color: #f5f5f5; /* 배경색 */
+    color: #000000;  
+    width: 100px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.m-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+    text-align: left;
+  }
+</style>
+
+<table class="m-table">
+  <tr>
+    <td> <b>???</b> </td>
+
+    <td><b>수량: <br>쿨타임: </b><span style="display:block; border-top:1.5px solid #dddddd; margin:8px 0;"></span>???</td>
+  </tr>
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-"></a><a href="#목차"><b>3.</a> 스토리</b></h2></summary>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-1"></a><a href="#목차"><b>3.1.</a> 캐릭터 설정</b></h2></summary>
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>아비게일 서머셋</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>동화 작가</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>21</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>???</td>
+  </tr>
+  <tr>
+    <td> <b>몸무게</b> </td>
+    <td>???</td>
+  </tr>
+  <tr>
+    <td> <b>국적</b> </td>
+    <td><p class="text1"><a href="https://namu.wiki/w/%EC%98%81%EA%B5%AD" target="_blank"> <img src="https://i.postimg.cc/NFX5GGWx/IMG-1099.png" style="height:1.1em; vertical-align:middle;"> 영국</a></p> </td>
+  </tr>
+  <tr>
+    <td><b>출신 계급</b></td>
+    <td>저명한 지식인 가문</td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td> 꿈, 상상 </td>
+  </tr>
+  <tr>
+    <td><b>장기</b></td>
+    <td> 동화 집필 </td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td> ??? </td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td>순수한 영혼을 지닌 존재<a class="text2" id="ref2" href="#각주2"><sup>[2]</sup></a></td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td>순수하지 않은 존재<a class="text3" id="ref3" href="#각주3"><sup>[3]</sup></a></td>
+  </tr>
+
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-2"></a><a href="#목차"><b>3.2.</a> 배경 스토리</b></h2></summary>
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>아비게일의 사명은 순수한 영혼들을 위하여 하나의 세계를 짓는 일입니다. 베를 짜듯이 꿈의 조각을 엮다 보면, 그들을 위한 아주 멋진 세계가 완성되기 마련입니다.</td>
+ </tr>
+
+</table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; -webkit-text-size-adjust: 100%; background-color: rgb(255, 255, 255);"> <div style="height:10px;"></div> 권위적인 지식인 가문의 딸인 아비게일은 어려서부터 부모님과 같은 길을 걷기를 강요받았습니다. 어린아이에게 어울리지 않는 두꺼운 전문 서적들에 짓눌린 어린 아비게일의 유일한 즐거움은 친오빠가 몰래 가져다 주는 동화책 속에 있었습니다.
+<div style="height:10px;"></div> 
+그녀는 머지않아 스스로 이야기를 짓는 법을 터득했고, 백지 위에 온갖 꿈과 색채를 적어내렸습니다. 선천적인 색각 이상도 동화 속 세계에서는 그녀를 방해할 수 없습니다. 비록 뒤늦게 딸의 서랍장 속에 숨겨진 동화 묶음을 발견하고 분개한 부모님이 '다시는 허튼 짓 않게끔' 그녀를 먼 곳에 위치한 학교에 입학시켰지만, 아비게일은 오히려 부모님의 선택에 깊이 감사했습니다. 그곳에서 자신의 동화에 걸맞는 뮤즈를 만나게 되었으니까요. 그는 그야말로 아비게일이 바라던 완벽한 '주인공'이었습니다.
+<div style="height:10px;"></div> 
+그러나 그는 자신에게 주어진 시련을 견디기 어려웠는지 얼마 못 가 학교를 떠나고 말았습니다. 그리고 아비게일은, 자신이 집필하는 세계의 주인공이 될 그를 위하여, 그를 시련에 빠뜨린 자들에게 천벌을 내렸을 뿐입니다. <b>동화 속의 악당들이 결국 하늘의 벌을 받는 것은 당연하잖아요.</b>
+<div style="height:10px;"></div> 
+학교를 졸업하고 성년을 맞은 아비게일에게는 다시금 '주인공'의 모습을 기록할 하나의 기회가 날아들었습니다. 초대장과 완성되지 않은 동화책을 챙긴 그녀는 망설임 없이 장원으로 향하게 됩니다.</span></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-3"></a><a href="#목차"><b>3.3.</a> 배경 추리</b></h2></summary>
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>1. 파랑새</b></p>그 새가 '행복'을 상징하는 이유는 그만큼 희소하기 때문이겠지요.<br><br>편지 한 장: 이번에 태어난 둘째 아이는 딸입니다만, 분명 이 아이도 가문의 명예에 한 획을 그어야겠지요. 서머셋의 수치가 되지 않도록 지도하겠습니다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>2. 모노크롬</b></p>이 땅은 어쩌면 이렇게도 단조로울까요?<br><br>소견서의 내용: ···따님에게는 선천적인 색각 이상이 있는 것으로 추정됩니다. 인지하실 수 있는 색상은 청색과 황색 스펙트럼에 국한되어···</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>3. 파랑</b></p>그럼에도 나는 파란 꿈을 꾸어요.<br><br>어린이가 쓰기엔 지나치게 큰 책상 밑, 그림책 몇 권이 비밀스레 쌓여 있다.
+<br>
+'너를 무척 아끼는 오빠로부터!'</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>4. 발각</b></p>비밀을 들키는 것은 썩 유쾌한 일이 아닙니다.<br><br>"아직도 철이 들지 못했구나. 그 바보 같은 책과 종이 더미는 모조리 태워 버렸다. 아무래도 너를 기숙 학교에 보내야겠어!"</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>5. 노랑</b></p>내가 처음 본 꽃의 색깔은···<br><br>일기 한 장: 부모님이 나를 이 학교에 입학시키신 것은 운명의 인도였다.<br>
+드디어 나도 스스로의 힘으로 등화를 쓸 수 있을 것 같다··· 완벽한 '주인공'을 찾았기 때문이다.</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>6. 낙화</b></p>꽃은 금세 시들었고, 파랑새는 날아가 버렸다.<br><br>"이솝? 그 애는 어제부로 이 학교에서 제적당했단다. 무슨 용건이라도 있니?"</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>7. 신의 심판</b></p>이루어지지 않는다면 내 손으로 이루겠어요.<br><br>아비게일 서머셋에 관한 소문: "그 패거리 녀석들이 의문의 사고를 당한 날, 마치 마녀처럼 창가에서 그 광경을 가만히 지켜보고 있었대!"</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>8. 제레마이어</b></p>잘 가, 하나뿐인 오빠. <br><br>제레마이어의 마지막 서신: '감사하게도 제이 칼 씨와 모든 이야기를 마쳤어. 아비게일, 나중에 꼭 멋진 책을 완성해 줘. 너를 무척 아끼는 오빠로부터!'</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>9. 재회</b></p>나를 다시 그의 앞으로 인도해 줘서 고마워.<br><br>"다시 만나게 되어 기뻐요, '이솝 칼'···."</td></tr></tbody></table></p>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>10. 피날레</b></p>곧 멋진 동화 한 편이 완성될 거예요. <br><br>발신지도, 봉랍에 새겨진 무늬도, 그가 가지고 있던 초대장과 동일하다. 그렇다면 거절할 이유가 없다.</td></tr></tbody></table></p>
+
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차3-4"></a><a href="#목차"><b>3.4.</a> 인물 관계</b></h2></summary>
+
+<p class="text1">
+<b>장원에 오기 전</b>
+
+<p class="text1"><b>  •&nbsp;&nbsp;제레마이어 서머셋</b></p>동화 작가의 친오빠이자 그녀에게 새로운 세상을 전달해준 인물.
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/납관사"><b>이솝 칼</b></a></p>동화 작가의 뮤즈. 동화 작가의 동급생으로, 순수한 영혼을 가지고 자신의 것에 몰두했던 소년.
+
+<hr style="border: none; height: 1px; background: #dddddd; margin: 20px 0;">
+
+<b>장원에 온 후</b>
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/납관사"><b>납관사</b></a></p>내향적인 성격을 가진 3조의 인물. 생명에 대해 남다른 인식을 가지고 있어 같은 조의 우편 배달부를 납관하기 위해 그에게 편지를 보내 접근했다. 이후 우편 배달부가 사망하자 먹잇감을 잃었다는 생각에 공격적인 모습을 보인다.
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/장난감%20상인"><b>장난감 상인</b></a></p>보다 적극적인 태도를 보였던 3조의 인물. 주최 측의 편지 조작으로 타자를 오해해 납관사와 협력, 타자를 살해한 후 납관사에게 살해당한다.
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/우편%20배달부(제5인격)"><b>우편 배달부</b></a></p>사물과 비인간 동물에게 애착을 가진 3조의 인물. 납관사는 우편 배달부를 납관하고자 하였으나 모종의 사고로 이는 실패하고 우편 배달부는 사망한다.
+
+<p class="text1"><b>  •&nbsp;&nbsp;</b><a href="https://namu.wiki/w/타자(제5인격)"><b>타자</b></a></p>적극적인 소통을 거부하던 3조의 인물. 조울증을 겪고 있어 크리켓을 치는 것으로 괴로움을 해소하지만 이는 장난감 상인에게 불안을 조성한다. 우편 배달부의 사망 이후 납관사와 장난감 상인에 의해 살해당한다.
+
+</p>
+</details>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차4"></a><a href="#목차"><b>4.</a> 이어보기</b></h2></summary>
+
+<p class="text1">▶ &nbsp;<span style="display: inline-block; white-space: nowrap;">
+            <a class="wikigreen" href="https://namu.wiki/w/납관사" target="_blank"> <td class="wt-detail"><img src="https://i.postimg.cc/hvbbBxN3/IMG-1082.jpg" style="height:1em; vertical-align:middle;">
+                <span class="wikigreentext">상세 페이지 이동</span>
+            </a>
+        </span>&nbsp;<br></p>
+</details>
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 아이템 업적 달성 조건 작성
+</p>
+<p id="각주2">
+  <a href="#ref2">[2]</a> 아이들, 이솝 칼
+</p>
+<p id="각주3">
+  <a href="#ref3">[3]</a> 대부분의 사람들
+</p>
+
+</div>
