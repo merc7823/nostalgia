@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제5인격 '교사'</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background-color: #ffffff; /* 전체 흰 배경 */
+      color: #222;
+      font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR";
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<!-- ▼▼▼ 기본 설정란 ▼▼▼ -->
+
+<style>
+    #wikiwrap {
+      --wikimaincolor: #2d3444;
+    }
+     #wikiwrap {
+	font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	box-sizing : border-box;
+	font-size: 15px;
+	line-height: 1.5;
+      --wikitextcolor: #e0ebff;
+      --wiki-font-size: 15px;
+      --wiki-line-height: 1.5;
+    }
+
+#wikiwrap a{
+    color: #0275d8 !important;
+    text-decoration: none;
+}
+
+#wikiwrap a::before{
+    content: none !important;
+}
+
+#wikiwrap a::after{
+    content: none !important;
+}
+
+
+.wiki-main-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid var(--wikimaincolor);
+  font-size: 14.4px;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.wt-name {
+  padding: 5px 10px;
+  border: 2px solid var #dddddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-copyright {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+}
+
+.wt-color {
+  width: 30%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: var(--wikimaincolor);
+  color: var(--wikitextcolor);
+}
+
+.wt-detail {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000000;
+}
+
+summary {
+    list-style-type: none;
+	opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary {
+	opacity: 1;
+}
+
+.wiki-h1-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h1-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h2-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h2-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.wiki-h3-icon ion-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .wiki-h3-icon ion-icon {
+  transform: rotate(0deg);
+}
+
+.text1 {
+	font-size: 15px;
+    line-height: 1.5;
+}
+a{text-decoration: none;}
+a::before{content: none;}
+
+.text1 a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.text1 a::before{
+	content: none !important;
+}
+
+.wiki-category{
+	width: 100%; border: 1px solid #ccc; border-radius: 4px; font-size: .9rem; font-weight: normal; line-height: 1.5; margin: 0 0 1em; padding: 0.2rem 0.5rem;
+}
+.wiki-category a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-category a::before{
+	content: none !important;
+}
+
+.wiki-h1{
+	font-size: 1.8em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h1-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em;  margin: 0.3em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h2{
+	font-size: 1.6em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h2-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-h3{
+	font-size: 1.4em; border-bottom: 1px solid #ccc; margin: 1.2em 0 0.7em; padding-bottom: 5px;
+}
+
+.wiki-h3-icon{
+	color: #666; float: left; font-weight: 400; line-height: 1em; margin: 0.2em 0.4em 0 0.2em; text-align: center; width: 0.9em;
+}
+
+.wiki-index{
+	border-collapse: collapse; width: auto; border: 1px solid #cccccc; margin: 0 0 20px 5px; line-height: 180%;
+}
+.wiki-index a{
+	color: #0275d8 !important;
+    text-decoration: none;
+}
+.wiki-index a::before{
+	content: none !important;
+}
+
+.wiki-quote{
+	border-collapse: collapse; width: auto; height: auto; margin: 1em 0;
+}
+
+.wiki-quote tr{
+	height: auto;
+}
+
+.wiki-quote td{
+	width: 100%; border: 2px dashed #ccc; border-left: 5px solid var(--wikimaincolor); background: #eee; padding: 1em; line-height: 160%;
+}
+
+.wiki-quote hr{
+	border: 0; border-top: 0.0625rem solid #ccc; margin: 0.5em 0;
+}
+
+.wiki-footnote{
+	border-top: solid 1px #777; margin: 1.5em 0; padding: .5em 0;
+}
+
+.wikigreenicon { 
+    background: green; 
+    color: white; 
+    padding: 0 0.08em; 
+    font-size: var(--wiki-font-size); 
+    vertical-align: middle; 
+}
+.wikigreentext { 
+    color: green; 
+    vertical-align: middle; 
+    font-size: var(--wiki-font-size); 
+    line-height: var(--wiki-line-height); 
+}
+.wikigreen:hover { 
+    text-decoration: underline; 
+    text-decoration-color: green; 
+}
+.wiki-img-sing {
+    width: 100%;
+    margin: 1em 0;
+    border-collapse: collapse;
+    line-height: 0;
+}
+.wiki-img-sing td {
+    padding: 0;
+    border: 2px solid var(--wikimaincolor);
+}
+.wiki-img-sing img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wiki-img-sing iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    box-shadow: none;
+}
+.wiki-img-sing iframe[src*="youtube.com"] {
+    border-radius: 0 !important;
+}
+
+</style>
+<div id="wikiwrap">
+  <p class="wiki-category">분류: <a href="https://namu.wiki/w/%EC%A0%9C5%EC%9D%B8%EA%B2%A9/%EC%83%9D%EC%A1%B4%EC%9E%90">제5인격/생존자</a></p>
+  <div class="wiki-container">
+    <table class="wiki-main-table">
+      <tbody>
+        <tr>
+          <td class="wt-name" colspan="2">
+            <b><span style="font-size: 13px;">생존자</span></b><br />
+            <b><span style="font-size: 20px;">약사</span></b><br />
+            <span style="font-size: 13px; line-height: 180%;"><ruby> 药剂师  ·  Pharmacist  ·  薬剤師<rt></rt></ruby></span>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td colspan="2" style="padding: 0;">
+            <div style="text-align: center;">
+              <img src="00이미지링크00" width="100%" style="display:block;">
+            </div>
+          </td>
+        </tr>
+        
+        <tr><td class="wt-color"><b>본명</b></td><td class="wt-detail"><b>넬케</b><br><b>Nelke</b></td></tr>
+<tr><td class="wt-color"><b>식별 번호</b></td><td class="wt-detail">-</td></tr>
+<tr><td class="wt-color"><b>성별</b></td><td class="wt-detail">여성</td></tr>
+<tr><td class="wt-color"><b>생일</b></td><td class="wt-detail">?월 ?일</td></tr>
+
+<tr><td class="wt-color"><b>소유 아이템</b></td><td class="wt-detail"><img src="아이템이미지" style="height:1.6em; vertical-align:middle;"><b> -</b></td></tr></td></tr>
+      </tbody>
+    </table>
+
+<div style="height:10px;"></div>
+
+        <table class="wiki-index">
+        <tbody>
+        <tr style="padding: 0 20px;">
+        <td style="width: 100%; margin-left: 5px; padding: 12px 20px 18px 20px; font-size: .95rem; line-height: 1.5;">
+        <a name="목차"></a><span style="font-size: 1.25em; margin-left: -5px;">목차</span><br />
+        <a style="padding-left: 0px;" href="#목차1-">1.</a> 개요<br />
+<a style="padding-left: 0px;" href="#목차2-">2.</a> 스토리<br />
+<a style="padding-left: 20px;" href="#목차2-1">2.1</a> 캐릭터 설정<br />
+<a style="padding-left: 20px;" href="#목차2-2">2.2</a> 배경 스토리<br />
+<a style="padding-left: 20px;" href="#목차2-3">2.3</a> 배경 추리<br />
+        </td></tr></tbody></table>
+  </div>
+  <details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차1-"></a><a href="#목차"><b>1.</a> 개요</b></h2></summary>
+
+<table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; font-size: 15px; font-weight: 700;">넬케는 선택받았던 날을 끝끝내 '기회'라고 여기게 되었습니다.</span><br></td></tr></tbody></table>
+
+<p class="text1"><span style="caret-color: rgb(33, 37, 41); color: rgb(33, 37, 41); font-family: &quot;Pretendard JP&quot;, Pretendard, -apple-system, BlinkMacSystemFont, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Noto Sans CJK KR&quot;, NanumBarunGothic, Roboto, &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, sans-serif, emoji; background-color: rgb(255, 255, 255);"><a href="https://namu.wiki/w/제5인격">제5인격</a>의 생존자. </span><br></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h1"><span class="wiki-h1-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-"></a><a href="#목차"><b>2.</a> 스토리</b></h2></summary>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-1"></a><a href="#목차"><b>2.1.</a> 캐릭터 설정</b></h2></summary>
+
+<style>
+  table.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.my-table th, 
+  table.my-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: center;
+  }
+  table.my-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.my-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+  }
+</style>
+
+<table class="my-table">
+  <tr>
+    <td> <b>본명</b> </td>
+    <td>넬케</td>
+  </tr>
+  <tr>
+    <td> <b>직업</b> </td>
+    <td>약사</td>
+  </tr>
+  <tr>
+    <td> <b>나이</b> </td>
+     <td>25</td>
+</tr>
+<tr>
+    <td> <b>신장</b> </td>
+     <td>불명</td>
+  </tr>
+    <td><b>출신 계급</b></td>
+    <td>고아<a class="text1" id="ref1" href="#각주1"><sup>[1]</sup></a></td>
+  </tr>
+  <tr>
+    <td><b>관심사</b></td>
+    <td>약학 실험, 화학 실험, 독서</td>
+  </tr>
+  <tr>
+    <td><b>장기</b></td>
+    <td><a href="https://namu.wiki/w/약학">약학</a>, 연소학</td>
+  </tr>
+  <tr>
+    <td><b>특성</b></td>
+    <td>온화함, 손재주, 집념, 집착, 감춘 속내</td>
+  </tr>
+  <tr>
+    <td><b>좋아하는 것</b></td>
+    <td>동질감, 약제, 햇볕 쬐기</td>
+  </tr>
+  <tr>
+    <td> <b>싫어하는 것</b> </td>
+    <td>가식적인 연기, 허위적인 거짓말</td>
+  </tr>
+
+</table>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-2"></a><a href="#목차"><b>2.2.</a> 배경 스토리</b></h2></summary>
+
+<style>
+  table.mi-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000000; 
+  }
+  table.mi-table th, 
+  table.mi-table td {
+    border: 1px solid #dddddd; /* 회색 선 */
+    padding: 5px;
+    text-align: left;
+  }
+  table.mi-table tr td:first-child {
+    background-color: #000000; /* 배경색 */
+    color: #ffffff;  
+    width: 20px; /* ← 여기서 맘대로 바꾸면 됨 (px, %, rem 가능) */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  /* 왼쪽 열 제외, 나머지 열 스타일 */
+  table.mi-table tr td:not(:first-child) {
+    background-color: #f5f5f5;
+    color: #000000;
+      padding: 7px 10px;
+
+  }
+</style>
+
+<table class="mi-table">
+  <tr>
+    <td><b>배경</b></td>
+    <td>넬케는 자신의 근본도, 이름의 근간도 알지 못하였습니다. 꽃의 이름을 가진 주제 뿌리내리지 못한 스스로가 우스운 나머지, 고아원의 그녀는 언제나 부표와도 같이 둥둥 떠돌았습니다. 부모조차 모른 채 고아원에서 지낼 수밖에 없었던 자신을 안타까워하는 주변인을 보며, 그녀는 늘 지루함에 시달렸습니다. 넬케에게 있어 그것은 평생에 걸쳐 이겨내야 할 숙제이자 동반자였습니다. 
+<br><br>
+다행 혹은 불행으로, 그녀는 또래 아이들보다 유독 영특한 모습을 보였습니다. 똑같은 나날들 속에서 딱 하나 달랐던 날은 고아원에 방문한 기부자에게 그녀의 총명함이 주목 받았던 날이었습니다. '우수한 고아를 길러낸' 칭호를 원한 이가 고아원의 기부자에서 넬케의 후원자가 될 때까지, 넬케가 선택한 것은 순응 뿐이었습니다. 그들은 한결같이 부를 지닌 이의 헌신을 찬양하고 그 친절에 감탄하였을 뿐이었으니까요. 넬케는 그 주목에 본인이 없다는 것을 알았습니다. 모두가 넬케가 받은 선택을 일생일대의 기회라 칭했습니다. 그 일생일대의 기회로 따분한 일상에 고작 추가된 교육은 아무런 흥미를 이끌지 못했지만, 고아의 위치로는 받기 힘들다는 도제 교육에 보내진 것은 그림 같은 미담을 만들어가고 있었습니다. 
+<br><br>
+미담, 칭호, 가십, 그 모든 극 속 조연이 되었던 아이에게 닥친 불행은 고아원을 휩쓴 꺼지지 않는 불길이었습니다. 그녀는 고아원에서 마지막으로 구출된 아이였습니다. <b>어쩌면 그것은 지루함을 끝내줄 기회였을지도 모릅니다.</b>
+<br><br>
+거의 성인의 나이가 된 넬케는 화상이 다 낫지 않은 손으로 약제를 만졌습니다. 교육을 끝마치고 약초를 다루는 약제사 밑에서 조수로 일하며 끝없이 재료와 약물에 손을 대고, 냄새를 맡고, 기록하였으며, 실험했습니다. 불길은 파괴이며 구원이고, 약물 또한 파괴이자 구원입니다. 약학이 지닌 양면성에 그녀는 속절없이 매혹되었습니다. 약초를 구하고 다듬으며 약을 만들어내는 것 외에도, 그녀는 물심양면으로 사람을 도왔습니다. 고아 출신의 약제사. 언제나 웃는 낯으로 사람을 구하려 애쓰는 이. 스승의 집에 난 화재로 물려받게 된 그녀의 약국의 불은 늘, 밤 늦게까지 꺼지지 않았습니다.</td>
+ </tr>
+
+</table>
+
+</span></p>
+</details>
+
+<details open><summary class="text1"><h2 class="wiki-h2"><span class="wiki-h2-icon"><ion-icon name="chevron-down-outline"></ion-icon></span> <a name="목차2-3"></a><a href="#목차"><b>2.3.</a> 배경 추리</b></h2></summary>
+
+<style>
+  details {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  summary {
+    font-weight: normal; /* 본문과 비슷하게 */
+  }
+  details[open] summary {
+    font-weight: bold; /* 원하면 펼쳤을 때 강조 */
+  }
+</style>
+
+<details>
+  <summary>[ 펼치기 · 접기 ]</summary>
+
+  <p><table class="wiki-quote"><tbody><tr><td class="text1" style="border-left: 5px solid #83BA75;"><p class="text1"><b>배경추리 준비중</b></p>-<br><br>-</td></tr></tbody></table></p>
+
+
+</details>
+</details>
+
+
+<br><div style="width: 100%; height: 1px; background:#000000; margin: 15px auto;">
+
+</div>
+
+<p id="각주1">
+  <a href="#ref1">[1]</a> 화재조사관과 동일한 고아원 출신
+</p>
+
+</div>
